@@ -20,7 +20,7 @@
 \usepackage{tikz}
 \begin{document}
 \scriptsize
-\begin{multicols}{2}
+\begin{multicols*}{2}
 \noindent\textbf{麦克斯韦方程组(时域)}:$\nabla\times\bm{E}(\bm{r},t)=-\partial\bm{B}(\bm{r},t)/\partial t$(\textbf{法拉第电磁感应定律}\textcircled{\tiny{1}}),$\nabla\times\bm{H}(\bm{r},t)=\bm{J}(\bm{r},t)+\partial\bm{D(\bm{r},t)}/\partial t$(\textbf{安培定律}\textcircled{\tiny{2}}),$\nabla\cdot\bm{B}(\bm{r},t)=0$(\textbf{磁高斯定律,不存在磁单极子}\textcircled{\tiny{3}}),$\nabla\cdot\bm{D}(\bm{r},t)=\rho(\bm{r},t)$(\textbf{电高斯/库仑定律}\textcircled{\tiny{4}}),其中$\bm{E}$-电场强度(V/m),$\bm{H}$-磁场强度(A/m),$\bm{D}$-电位移矢量/电通量密度(C/m$^2$),$\partial\bm{D}/\partial t$-位移电流,$\bm{B}$-磁感应强度/磁通量密度(T,Wb/m$^2$);无源条件下(下同),自由电流密度$\bm{J}=0$,电荷密度$\rho=0$\\
 \textbf{麦氏方程组(频域,无源)}:$\nabla\times\bm{E}(\bm{r},\omega)=-j\omega\bm{B}(\bm{r},\omega)$(\textcircled{\tiny{1'}}),$\nabla\times\bm{H}(\bm{r},\omega)=j\omega\bm{D}(\bm{r},\omega)$(\textcircled{\tiny{2'}}),$\nabla\cdot\bm{B}(\bm{r},\omega)=0$(\textcircled{\tiny{3'}}),$\nabla\cdot\bm{E}(\bm{r},\omega)=0$(\textcircled{\tiny{4'}})\\
 \textbf{本构关系}:$\bm{D}=\epsilon_0\bm{E}+\bm{P}\approx(\text{弱场})\epsilon_0(1+\chi)\bm{E}=\epsilon_0\epsilon_r\bm{E}=\epsilon\bm{E}$,$\bm{B}=\mu\bm{H}=\mu_0\mu_r\bm{H}\approx(\text{非磁介质})\mu_0\bm{H}$,其中$\epsilon$-介电常数,真空…$\epsilon_0=8.85\times 10^{-12}$F/m$\approx(36\pi)^{-1}\times 10^{-9}$F/m,$\epsilon_r$-相对…,$\chi$-电极化率,弱场下,电极化强度$\bm{P}=\chi\bm{E}$,$\mu$-磁导率,真空…$\mu_0=4\pi\times 10^{-7}$H/m,对非磁介质(下同),相对…$\mu_r=1$\\
@@ -69,7 +69,7 @@
 \rule{\columnwidth}{.5pt}\\
 \textbf{波导传输损耗}:$\alpha_{\text{dB}}=-10\lg(P_{\text{out}}/P_{\text{in}})$;来源:1)光与介质中电子(主要),原子,分子相互作用致吸收损耗,化为热,声,2)波导结构缺陷,包括几何上的不规则,材料缺陷和不均匀,(对玻璃等无定型材料)团簇大小和组分的涨落,致散射损耗,表现为反向传播,跳模,辐射模\\
 \textbf{复电极化率}:$\nabla\times\bm{H}=(j\omega\epsilon+\sigma)\bm{E}=j\omega\epsilon_0\tilde{\epsilon}_r\bm{E}\Rightarrow\tilde{\epsilon}_{r}=\frac{\epsilon}{\epsilon_0}-j\frac{\omega}{\epsilon}=\epsilon_r-j\epsilon_i$\\
-由\textbf{Drude(/自由电子)模型}(适用含大量无束缚载流子的介质):$\tilde{\epsilon}_r=1-\frac{\omega_p^2}{\omega^2+\omega_c^2}-j\frac{\omega_c\omega_p^2}{\omega(\omega^2+\omega_c^2)}$,其中$\omega_c$-碰撞频率,$\omega_p$-等离子体频率;证:载流子受电场力和(碰撞致)阻尼力,$qE(t)-m\omega_c\dot{x}=m\ddot{x}$,其中$q$-载流子电荷,$m$-质量,$x$-位移,对单色光,电场$E(t)=E_0e^{j\omega t}$,猜$x(t)=x_0e^{j\omega t}$,回代得$x_0=\frac{qE_0}{jm\omega\omega_c-m\omega^2}\Rightarrow x(t)=\frac{qE(t)}{m(j\omega\omega_c-\omega^2)}$,电偶极矩$p(t)=qx=\frac{q^2E(t)}{m(j\omega\omega_c-\omega^2)}$,电极化强度$P(t)=Np=\frac{Nq^2E(t)}{m(j\omega\omega_c-\omega^2)}$,电位移矢量$D(t)=\epsilon_0E+P=\epsilon_0[1+\frac{Nq^2}{\epsilon_0m(j\omega\omega_c-\omega^2)}]E(t)=\epsilon_0\tilde{\epsilon}_rE(t)$,其中$\tilde{\epsilon}_r=1-\frac{Nq^2}{\epsilon_0m(\omega^2-j\omega\omega_c)}=1-\frac{\omega_p^2}{\omega^2-j\omega\omega_c}$毕,其中$\omega_p=\sqrt{\frac{Nq^2}{\epsilon_0m}}$通常在紫外波段;对金属,自由电子罕碰撞,$\omega_c=0$,$\epsilon_i=0$,$\tilde{\epsilon}_r=1-(\frac{\omega_p}{\omega})^2$\\
+由\textbf{Drude(/自由电子)模型}(适用含大量无束缚载流子的介质):$\tilde{\epsilon}_r=1-\frac{\omega_p^2}{\omega^2+\omega_c^2}-j\frac{\omega_c\omega_p^2}{\omega(\omega^2+\omega_c^2)}$,其中$\omega_c$-碰撞频率,$\omega_p$-等离子体频率;证:载流子受电场力和(碰撞致)阻尼力,$qE(t)-m\omega_c\dot{x}=m\ddot{x}$,其中$q$-载流子电荷,$m$-质量,$x$-位移,对单色光,电场$E(t)=E_0e^{j\omega t}$,猜$x(t)=x_0e^{j\omega t}$,回代得$x_0=\frac{qE_0}{jm\omega\omega_c-m\omega^2}\Rightarrow x(t)=\frac{qE(t)}{m(j\omega\omega_c-\omega^2)}$,电偶极矩$p(t)=qx=\frac{q^2E(t)}{m(j\omega\omega_c-\omega^2)}$,电极化强度$P(t)=Np=\frac{Nq^2E(t)}{m(j\omega\omega_c-\omega^2)}$,电位移矢量$D(t)=\epsilon_0E+P=\epsilon_0[1+\frac{Nq^2}{\epsilon_0m(j\omega\omega_c-\omega^2)}]E(t)=\epsilon_0\tilde{\epsilon}_rE(t)$,其中$\tilde{\epsilon}_r=1-\frac{Nq^2}{\epsilon_0m(\omega^2-j\omega\omega_c)}=1-\frac{\omega_p^2}{\omega^2-j\omega\omega_c}$毕,其中$\omega_p=\sqrt{\frac{Nq^2}{\epsilon_0m}}$通常在紫外波段;对金属,自由电子罕碰撞,$\omega_c\approx 0$,$\epsilon_i\approx 0$,$\tilde{\epsilon}_r\approx 1-(\frac{\omega_p}{\omega})^2$\\
 由\textbf{Lorenz模型}(适用电荷受核束缚的介质):$\tilde{\epsilon}_r=1-\frac{\omega_p(\omega^2-\omega_0^2)}{(\omega^2-\omega_0^2)+\omega^2\omega_c^2}-j\frac{\omega_p^2\omega_c\omega}{(\omega^2-\omega_0^2)+\omega^2\omega_c^2}$,其中$\omega$-谐振频率;证:载流子受电场力,阻尼力和回复力,$qE(t)-m\omega_c\dot{x}-m\omega_0^2x(t)=m\ddot{x}$,同理$x(t)=\frac{qE(t)}{m(\omega_0^2-\omega^2+j\omega\omega_c)}$,$\tilde{\epsilon}_r=1+\frac{Nqx}{E}=1-\frac{Nq^2}{m\epsilon_0(\omega^2-\omega_0^2-j\omega\omega_c)}$毕;若$\omega=\omega_0$,共振,吸收最强;若$\omega$远离$\omega_0$,$\frac{\mathrm{d}n}{\mathrm{d}\omega}>0$,正(常)色散;若$\omega$接近$\omega_0$,$\frac{\mathrm{d}n}{\mathrm{d}\omega}<0$,反(常)色散\\ % 图？
 \textbf{复折射率}:$\tilde{n}=\sqrt{\tilde{\epsilon}_r}=n-j\kappa$,其中$n=(\frac{\epsilon_r+\sqrt{\epsilon_r^2+\epsilon_i^2}}{2})^{1/2}$,$\kappa=(\frac{-\epsilon_r+\sqrt{\epsilon_r^2+\epsilon_i^2}}{2})^{1/2}$,通常(半导体,绝缘体等)$\kappa\ll n$,对金属$\kappa\gg n$;\textbf{复波矢}:$\tilde{k}=k\tilde{n}=nk-j\kappa k\Rightarrow$$\abs{E}\propto\abs{e^{j\omega t-j\tilde{k}x}}=e^{-\kappa kx}$;\textbf{衰减系数}$\alpha=\kappa k$,\textbf{衰减长度(集肤深度)}:$\alpha^{-1}=(\kappa k)^{-1}$,对平面波导,$\tilde{n}_c=n_c-j\kappa_c$,$\tilde{n}_f=n_f-j\kappa_f$,$\tilde{n}_s=n_s-j\kappa_s$,对TE模,$\alpha_{\text{TE}}=k[\kappa_sn_s\int_{-\infty}^{-h}\abs{e_y(x)}^2\,\mathrm{d}x+\kappa_fn_f\int_{-h}^0\abs{e_y(x)}^2\,\mathrm{d}x+\kappa_cn_c\int_0^{+\infty}\abs{e_y(x)}^2\,\mathrm{d}x]/[N\int_{-\infty}^{+\infty}\abs{e_y(x)}^2\,\mathrm{d}x]$\\
 \textbf{金属包层平板波导}:$\because$完美导体内无电场,由边界条件$e_y(0)=0\forall$TE;TM有少量$h_y(x)$渗入金属,损耗$>$TE;TM$_0$能量大量集中于与金属交界面附近,称\textbf{表面波};$\tilde{\beta}=\beta-j\alpha$,对良好束缚波导,$\text{b}\approx 1\Rightarrow\beta\approx n_fk$,$\tilde{k}_f=\sqrt{k^2\tilde{n}_f^2-\tilde{\beta}^2}\approx 0$,$\tilde{\gamma}_c=\sqrt{\tilde{\beta}^2-k^2\tilde{n}_c^2}$,$\abs{\tilde{\gamma}_c}\gg\abs{\tilde{k}_f}$,$\arctan\frac{\tilde{\gamma}_c}{\tilde{k}_f}\approx\frac{\pi}{2}-\arctan\frac{\tilde{k}_f}{\tilde{\gamma}_c}\approx\frac{\pi}{2}-\frac{\tilde{k}_f}{\tilde{\gamma}_c}$,$\tilde{\gamma}_s=\sqrt{\tilde{\beta}^2-k^2\tilde{n}_s^2}$,$\abs{\tilde{\gamma}_s}\gg\abs{\tilde{k}_f}$,$\arctan\frac{\tilde{\gamma}_s}{\tilde{k}_f}\approx\frac{\pi}{2}-\frac{\tilde{k}_f}{\tilde{\gamma}_s}$,\textbf{TE特征方程}:$\tilde{k}_fh\approx(m+1)\pi-\frac{\tilde{k}_f}{\tilde{\gamma}_c}-\frac{\tilde{k}_f}{\tilde{\gamma}_s}\Rightarrow\tilde{k}_f=\frac{(m+1)\pi}{h}(1+\frac{1}{\tilde{\gamma}_ch}+\frac{1}{\tilde{\gamma}_sh})^{-1}\Rightarrow\tilde{\beta}_{\text{TE}m}=\sqrt{k^2\tilde{n}_f^2-\tilde{k}_f^2}\approx k\tilde{n}_f(1-\frac{\tilde{k}_f^2}{2k^2\tilde{n}_f^2})\approx k\tilde{n}_f-\frac{(m+1)^2\pi^2}{2k\tilde{n}_fh^2}(1+\frac{1}{\tilde{\gamma}_sh}+\frac{1}{\tilde{\gamma}_ch})^{-2}$,若芯层无损,$\kappa_f=0$,$\tilde{n}_f=n_f$,$\frac{\tilde{\beta}_{\text{TE}m}}{k}\approx n_f-\frac{(m+1)^2\pi}{2n_f(kh)^2}(1+\frac{1}{kh\sqrt{n_f^2-\tilde{n}_c^2}}+\frac{1}{kh\sqrt{n_f^2-\tilde{n}_s^2}})$,$\frac{\alpha_{\text{TE}m}}{k}\approx\frac{(m+1)^2\pi^2}{2n_f(kh)^2}\im[\frac{1}{kh\sqrt{n_f^2-\tilde{n}_c^2}}+\frac{1}{kh\sqrt{n_f^2-\tilde{n}_s^2}}]^{-2}$,$\because$通常$\abs{\epsilon_r}\gg\epsilon_i$,$\therefore\frac{\alpha_{\text{TE}m}}{k}\approx\frac{(m+1)^2\pi^2}{2n_f(kh)^2}\im[-2(\frac{1}{\sqrt{n_f^2-\epsilon_{cr}+j\epsilon_{ci}}}+\frac{1}{\sqrt{n_f^2-\epsilon_{sr}+j\epsilon_{si}}})]\approx\frac{(m+1)^2\pi^2}{2n_f(kh)^2}[\frac{\epsilon_{ci}}{(n_f^2-\epsilon_{cr})^{3/2}}+\frac{\epsilon_{si}}{(n_f^2-\epsilon_{sr})^{3/2}}]$;\textbf{TM}同理$\frac{\tilde{\beta}_{\text{TM}m'}}{k}\approx n_f-\frac{(m'+1)^2\pi^2}{2n_f(kh)^2}[1+\frac{\tilde{n}_c^2}{n_f}\frac{1}{kh\sqrt{n_f^2-\tilde{n}_c^2}}+\frac{\tilde{n}_s}{n_f^2}\frac{1}{kh\sqrt{n_f^2-\tilde{n}_s^2}}]^{-2}$,$\frac{\alpha_{\text{TM}m'}}{k}\approx\frac{(m'+1)^2\pi^2}{2n_f(kh)^2}[\frac{\epsilon_{ci}(2n_f^2-\epsilon_{cr})}{n_f^2(n_f^2-\epsilon_{cr})^{3/2}}+\frac{\epsilon_{si}(2n_f^2-\epsilon_{sr})}{n_f^2(n_f^2-\epsilon_{sr})^{3/2}}]$;$m\uparrow$,$h\uparrow$,则$\alpha\downarrow$;$\because\frac{2n_f^2-\epsilon_{cr/sr}}{n_f^2}>1$,$\therefore$同阶TE损耗$<$TM;对包层$\backslash$衬底均金属的TM$_0$,$n_s^2=n_c^2=\epsilon_1$,$n_f^2=\epsilon_2$,由麦氏方程,$\tilde{\beta}=k\sqrt{\frac{\epsilon_1\epsilon_2}{\epsilon_1+\epsilon_2}}\Rightarrow N^2=\frac{\epsilon_1\epsilon_2}{\epsilon_1+\epsilon_2}\Rightarrow\re(\frac{N^2}{n_f^2})=\re(\frac{\epsilon_1}{\epsilon_1+\epsilon_2})>1$,或由特征方程,$\tilde{k}_fh=2\arctan\frac{n_f^2}{\tilde{n}_s^2}\frac{\tilde{\gamma}_s}{\tilde{k}_f}+m'\pi$,其中$\tilde{k}_f=j\sqrt{\tilde{\beta}^2-k^2n_f^2}$,$j\sqrt{\tilde{\beta}^2-k^2n_f^2}h=m'\pi-j2\arctanh\frac{n_f^2}{\tilde{n}_s^2}\frac{\sqrt{\tilde{\beta}^2-k^2\tilde{n}_s^2}}{\sqrt{k^2n^2-\tilde{\beta}^2}}$,金属$\abs{\epsilon_{sr}}\gg\epsilon_{si}$,$\therefore\tilde{n}_s^2=\epsilon_{sr}-j\epsilon_{si}\approx\re[\tilde{n}_s^2]<0\Rightarrow j\sqrt{\tilde{\beta}^2-k^2n_f^2}h=m'\pi-j\arctanh\frac{n_f^2}{\re[\tilde{n}_s^2]}\frac{\sqrt{\tilde{\beta}^2-k^2\re[\tilde{n}_s^2]}}{\sqrt{\tilde{\beta}^2-k^2n_f^2}}$,对$m'\neq 0$,式左纯虚,$\therefore\beta$必非纯实,对$m'=0$,$\tanh\frac{\sqrt{\tilde{\beta}^2-k^2n_f^2}h}{2}=-\frac{n_f^2}{\tilde{n}_s^2}\frac{\sqrt{\tilde{\beta}^2-k^2\tilde{n}_s^2}}{\sqrt{\tilde{\beta}^2-k^2n_f^2}}$,良好束缚时$\tilde{k}_fh\rightarrow\infty$,$\therefore-\frac{n_f^2}{\tilde{n}_s^2}\frac{\sqrt{\tilde{\beta}^2-k^2\tilde{n}_s^2}}{\sqrt{\tilde{\beta}^2-k^2n_f^2}}\approx 1\Rightarrow\frac{\tilde{\beta}}{k}\approx\sqrt{\frac{n_f^2\tilde{n}_s^2}{n_f^2+\tilde{n}_s^2}}$,沿芯层与金属交界面附近传播,并非由折射率束缚,称表面等离子基元波\\% 图
@@ -77,11 +77,306 @@
 \textbf{3D波导}:模式命名:$E_{p,q}^{x/y}$,其中$x/y$-主要电场分量方向,$p-1$,$q-1$-$x$,$y$方向电场分布零点数\\
 \textcircled{\tiny{5}}$\Rightarrow-j\beta\hat{z}\times[e_x(x,y)\hat{x}+e_y(x,y)\hat{y}]-\hat{z}\times[\frac{\partial e_x(x,y)}{\partial x}\hat{x}+\frac{\partial e_y(x,y)}{\partial y}\hat{y}]$,\textcircled{\tiny{6}}$\Rightarrow\hat{z}[\frac{\partial e_y(x,y)}{\partial x}-\frac{\partial e_x(x,y)}{\partial y}]=-j\omega\mu_0h_z(x,y)\hat{z}$\\
 弱导条件(weakly guiding,$n_f\approx n_s$,3D波导通常用衬底掺杂实现,折射率变化很小,故适用,与良好束缚不冲突)下,$k_f^2=k^2n_f^2-\beta^2=k^2n_f(n_f+n_s)(1-b)\Delta\approx 2k^2n_f^2(1-b)\Delta\Rightarrow\frac{k_f}{kn_f}=\sqrt{2}\sqrt{(1-b)\Delta}<\sqrt{2\Delta}\sim o(\delta)$,其中$\Delta=\frac{n_f-n_s}{n_f}$,$o(\delta)$-一阶小量,$k_f^2=k_x^2+k_x^2\Rightarrow\frac{k_{x/y}}{kn_f}\sim\delta$;对良好束缚的$E^y$模,$\abs{H_x}\sim\frac{n}{\eta_0}\abs{E_y}\sim o(1)$,$\abs{H_z}\sim\frac{n}{\eta_0}\abs{E_z}\sim o(\delta)$,$\abs{H_z}\sim\frac{n}{\eta_0}\abs{E_x}\sim o(\delta^2)$,$\frac{n}{\eta_0}E_x=o(\delta^2)$,$\frac{n}{\eta_0}E_y=-\frac{\beta}{kn}H_x+o(\delta^2)=-\frac{kn}{\beta}H_x+o(\delta^2)$,$\frac{n}{\eta_0}E_z=\frac{j}{kn}\frac{\partial H_x}{\partial y}+o(\delta^2)$,$H_y=o(\delta^2)$,$H_z=-\frac{j}{\beta}\frac{\partial H_x}{\partial x}+o(\delta^2)$;证:初始有$\abs{E_y}\sim 1$,故$H_y$可忽略,\textcircled{\tiny{3'}}$\Rightarrow\frac{\partial H_x}{\partial x}+\frac{\partial H_z}{\partial z}=\frac{\partial H_x}{\partial x}-j\beta H_z=0\Rightarrow\abs{H_z}\sim\abs{\frac{1}{\beta}\frac{\partial H_x}{\partial x}}\sim\abs{\frac{k_x}{\beta}H_z}\sim\abs{\frac{k_x}{nk}H_x}\sim\delta$,\textcircled{\tiny{2'}}$\Rightarrow\frac{\partial H_x}{\partial z}-\frac{\partial H_z}{\partial x}=j\beta H_x-\frac{\partial H_z}{\partial x}=j\omega\epsilon_0n^2E_y\Rightarrow\frac{n}{\eta_0}E_y=\frac{j}{kn}\frac{\partial H_z}{\partial x}-\frac{\beta}{kn}H_x$,其中$\abs{\frac{1}{kn}\frac{\partial H_z}{\partial x}}\sim\abs{\frac{k_x}{kn}H_z}\sim\delta^2\Rightarrow\abs{H_x}\sim\abs{\frac{\beta}{kn}H_x}\sim\abs{\frac{n}{\eta_0}E_y}\sim o(1)$,$H_z\approx-\frac{j}{\beta}\frac{\partial H_x}{\partial x}$入$j\beta H_x-\frac{\partial H_z}{\partial x}=j\omega\epsilon_0n^2E_y\Rightarrow\frac{n}{\eta_0}E_y\approx\frac{1}{kn\beta}(\frac{\partial^2H_x}{\partial x}-\beta^2H_x)$,$\nabla_t^2H_x+(k^2n^2-\beta)H_x=0$入$\Rightarrow\frac{n}{\eta_0}E_y\approx-\frac{1}{kn\beta}(\frac{\partial^2H_z}{\partial y^2}+k^2n^2H_x)$,其中$\abs{\frac{1}{kn\beta}\frac{\partial^2H_z}{\partial y^2}}\sim\abs{\frac{k_y^2}{k^2n^2}H_x}\sim o(\delta)^2\Rightarrow\frac{n}{\eta_0}E_y\approx-\frac{kn}{\beta}H_x$,\textcircled{\tiny{2'}}$\Rightarrow j\omega\epsilon_0n^2E_y\approx\frac{\partial H_y}{\partial y}\Rightarrow\frac{n}{\eta_0}E_x\approx-\frac{j}{kn}\frac{\partial H_z}{\partial y}\Rightarrow\abs{\frac{n}{\eta_0}E_x}\sim o(\delta^2)$,\textcircled{\tiny{2'}}$\Rightarrow j\omega\epsilon_0n^2E_z\approx\frac{\partial H_x}{\partial y}\Rightarrow\frac{n}{\eta_0}E_z\approx\frac{j}{kn}\frac{\partial H_x}{\partial y}\Rightarrow\abs{\frac{n}{\eta_0}E_z}\sim\abs{\frac{k_y}{kn}H_x}\sim o(\delta)$,\textcircled{\tiny{1'}}$\Rightarrow-j\omega\mu_0 H_y=\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}\Rightarrow H_y=\frac{\beta}{\omega\mu_0}E_x-\frac{j}{\omega\mu_0}\frac{\partial E_z}{\partial x}\approx\frac{n}{\eta_0}E_x-\frac{j}{kn}\frac{n}{\eta_0}\frac{\partial E_z}{\partial x}\Rightarrow\abs{H_y}\sim o(\delta^2)$;对良好束缚的$E^x$模,$\abs{H_y}\sim\frac{n}{\eta_0}\abs{E_x}\sim o(1)$,$\abs{H}_z\sim\frac{n}{\eta_0}\abs{E_z}\sim o(\delta)$,$\abs{H}_x\sim\frac{n}{\eta_0}\abs{E_y}\sim o(\delta^2)$,$\frac{n}{\eta_0}E_x=\frac{\beta}{kn}H_y+\delta(\delta^2)=\frac{kn}{\beta}H_y+o(\delta^2)$,$\frac{n}{\eta_0}E_y=o(\delta^2)$,$\frac{n}{\eta_0}E_y=o(\delta^2)$,$\frac{n}{\eta_0}E_z=-\frac{j}{kn}\frac{\partial H_y}{\partial x}+o(\delta^2)$,$H_x=o(\delta^2)$,$H_z=-\frac{-j}{\beta}\frac{\partial H_y}{\partial y}+o(\delta^2)$\\
-\textbf{Marcatili方法}:将3D波导$n(x,y)=n_1(\text{R1}:\abs{x}\leq\frac{w}{2},\abs{y}\leq\frac{h}{2}),n_2(\text{R2}:\abs{x}\leq\frac{w}{2},y>\frac{h}{2}),n_3(\text{R3}:x>\frac{w}{2},\abs{y}\leq\frac{h}{2}),n_4(\text{R4}:\abs{x}\leq\frac{w}{2},y<\frac{h}{2}),n_5(\text{R5}:x<-\frac{w}{2},\abs{y}\leq\frac{h}{2})$拆解为横向平板波导H$n(y)=n_1(\abs{y}\leq\frac{h}{2}),n_2(y>\frac{h}{2}),n_4(y<-\frac{h}{2})$和纵向平板波导W$n(x)=n_1(\abs{x}\leq\frac{w}{2}),n_3(x>\frac{w}{2}),n_5(x<-\frac{w}{2})$分别求解;对$E^y$模,R1有$H_{x1}=C_1\cos(k_{x1}x+\phi_{x1})\cos(k_{y1}+\phi_{y1})e^{-j\beta z}$,R2有$H_{x2}=C_2\cos(k_{x2}x+\phi_{x2})e^{-jk_{y2}y}e^{-j\beta z}$,R3有$H_{x3}=C_3e^{-jk_3x}\cos(k_{y3}y+\phi_{y3})e^{-j\beta z}$,R4有$H_{x4}=C_4\cos(k_{x4}x+\phi_{x4})e^{jk_{y4}y}e^{-j\beta z}$,R5有$H_{x5}=C_5e^{jk_{x5}x}\cos(k_{y5}y+\phi_{y5})e^{-j\beta z}$,其余4角能量少,故可忽略,其中$k_{xj}^2+k_{yj}=\beta^2=k^2n_j^2$,在$y=\pm\frac{h}{2}$,$H_{x1}=H_{x2/4}$,$\Rightarrow k_{x1}=k_{x2}=k_{x4}=k_x$,$\phi_{x1}=\phi_{x2}=\phi_{x4}=\phi_x$,$\frac{n}{\eta_0}E_z\approx\frac{j}{kn}\frac{\partial H_x}{\partial y}\Rightarrow\frac{1}{n^2}\frac{\partial H_x}{\partial y}$连续,$H_z\approx\frac{-j}{\beta}\frac{\partial H_x}{\partial x}\Rightarrow\frac{\partial H_x}{\partial x}$连续,在$x=\pm\frac{w}{2}$,$\mu_0H_{x1}=\mu_0H_{x3/5}\Rightarrow k_{y1}=k_{y3}=k_{y5}$,$\phi_{y1}=\phi_{y3}=\phi_{y5}=\phi_y$,$\frac{n}{\eta_0}E_y\approx-\frac{kn}{\beta}H_x\Rightarrow H_x$连续,$H_z\approx\frac{-j}{\beta}\frac{\partial H_x}{\partial x}\Rightarrow\frac{\partial H_x}{\partial x}$连续,$\frac{n}{\eta_0}E_z\approx\frac{j}{kn}\frac{\partial H_x}{\partial y}\Rightarrow E_{z1}-E_{z3}\approx\frac{j\eta_0}{k}\frac{1}{n_1^2}\frac{\partial}{\partial y}(H_{x1}-H_{x3})-\frac{j\eta_0}{n_3}\msout{\frac{n_1^2-n_3^2}{n_1^2}}o(\delta)\msout{\frac{1}{kn_3}\frac{\partial H_{x3}}{\partial y}}o(\delta)\Rightarrow H_x$连续(已有),在$y=h/2$,$C_1\cos(k_{y}\frac{h}{2}+\phi_y)=C_2e^{-jk_{y2}h/2}$,$-\frac{k_y}{n_1^2}C_1\sin(k_y\frac{h}{2}+\phi_y)=-\frac{jk_{y2}}{n_2^2}C_2e^{-jk_{y2}h/2}$,两式相除$\Rightarrow\tan(k_y\frac{h}{2}+\phi_y)=\frac{jk_{y2}n_1^2}{k_yn_2^2}$,由$k_{xj}^2+k_{yj}^2+\beta^2=k^2n_j^2$,$j=1,2$相减$\Rightarrow jk_{y2}=\sqrt{k^2(n_1^2-n_2^2)-k_y^2}$,回代$\Rightarrow\tan(k_y\frac{h}{2}+\phi_y)=\frac{n_1^2\sqrt{k^2(n_1^2-n_2^2)-n_y^2}}{n_2^2k_y}\Rightarrow$特征方程$k_y\frac{h}{2}+\phi_y=q'\pi+\arctan\frac{n_1^2\sqrt{k^2(n_1^2-n_2^2)-n_y^2}}{n_2^2k_y}$,在$y=-\frac{h}{2}$同理有特征方程$k_y\frac{h}{2}-\phi_y=q''\pi+\arctan\frac{n_1^2\sqrt{k^2(n_1^2-n_4^2)-k_y^2}}{n_4^2k_y}$,两特征方程相加消$\phi_y\Rightarrow k_yh=q\pi+\arctan\frac{n_1^2\sqrt{k^2(n_1^2-n_2^2)-k_y^2}}{n_2^2k_y}+\arctan\frac{n_1^2\sqrt{k^2(n_1^2-n_4^2)}}{n_4^2k_y}$,同理在$x=\pm\frac{w}{2}$,$k_xw=p\pi+\arctan\frac{\sqrt{k^2(n_1^2-n_3^2)-k_x^2}}{k_x}+\arctan\frac{\sqrt{k^2(n_1^2-n_5^2)-k_x^2}}{k_x}$,其中$\beta^2=n_1^2k^2-k_x^2-k_y^2$\\
-\textbf{归一化}:不失一般性,$n_1>n_5>n_4>n_2$,$n_5>n_3$,$V_H=kh\sqrt{n_1^2-n_4^2}$,对H,$a_H=\frac{n_4^2-n_2^2}{n_1^2-n_4^2}$,$b_H=\frac{\beta_H^2-k^2n_4^2}{k^2(n_1^2-n_4^2)}=\frac{N_H^2-n_4^2}{n_1^2-n_4^2}$,$c_H=\frac{n_4^2}{n_1^2}$,$d_H=c_H-a_H(1-c_H)=\frac{n_2^2}{n_1^2}$;对W,$V_W=kw\sqrt{n_1^2-n_5^2}$,$a_w=\frac{n_5^2-n_3^2}{n_1^2-n_5^2}$,$b_W=\frac{\beta_W^2-k^2n_5^2}{k^2(n_1^2-n_5^2)}$\\
+\textbf{Marcatili方法}:将3D波导$n(x,y)=n_1(\text{R1}:\abs{x}\leq\frac{w}{2},\abs{y}\leq\frac{h}{2}),n_2(\text{R2}:\abs{x}\leq\frac{w}{2},y>\frac{h}{2}),n_3(\text{R3}:x>\frac{w}{2},\abs{y}\leq\frac{h}{2}),n_4(\text{R4}:\abs{x}\leq\frac{w}{2},y<\frac{h}{2}),n_5(\text{R5}:x<-\frac{w}{2},\abs{y}\leq\frac{h}{2})$拆解为横向平板波导H,$n(y)=n_1(\abs{y}\leq\frac{h}{2}),n_2(y>\frac{h}{2}),n_4(y<-\frac{h}{2})$和纵向平板波导W,$n(x)=n_1(\abs{x}\leq\frac{w}{2}),n_3(x>\frac{w}{2}),n_5(x<-\frac{w}{2})$分别求解;对$E^y$模,R1有$H_{x1}=C_1\cos(k_{x1}x+\phi_{x1})\cos(k_{y1}+\phi_{y1})e^{-j\beta z}$,R2有$H_{x2}=C_2\cos(k_{x2}x+\phi_{x2})e^{-jk_{y2}y}e^{-j\beta z}$,R3有$H_{x3}=C_3e^{-jk_3x}\cos(k_{y3}y+\phi_{y3})e^{-j\beta z}$,R4有$H_{x4}=C_4\cos(k_{x4}x+\phi_{x4})e^{jk_{y4}y}e^{-j\beta z}$,R5有$H_{x5}=C_5e^{jk_{x5}x}\cos(k_{y5}y+\phi_{y5})e^{-j\beta z}$,其余4角能量少,故可忽略,其中$k_{xj}^2+k_{yj}=\beta^2=k^2n_j^2$,在$y=\pm\frac{h}{2}$,$H_{x1}=H_{x2/4}$,$\Rightarrow k_{x1}=k_{x2}=k_{x4}=k_x$,$\phi_{x1}=\phi_{x2}=\phi_{x4}=\phi_x$,$\frac{n}{\eta_0}E_z\approx\frac{j}{kn}\frac{\partial H_x}{\partial y}\Rightarrow\frac{1}{n^2}\frac{\partial H_x}{\partial y}$连续,$H_z\approx\frac{-j}{\beta}\frac{\partial H_x}{\partial x}\Rightarrow\frac{\partial H_x}{\partial x}$连续,在$x=\pm\frac{w}{2}$,$\mu_0H_{x1}=\mu_0H_{x3/5}\Rightarrow k_{y1}=k_{y3}=k_{y5}$,$\phi_{y1}=\phi_{y3}=\phi_{y5}=\phi_y$,$\frac{n}{\eta_0}E_y\approx-\frac{kn}{\beta}H_x\Rightarrow H_x$连续,$H_z\approx\frac{-j}{\beta}\frac{\partial H_x}{\partial x}\Rightarrow\frac{\partial H_x}{\partial x}$连续,$\frac{n}{\eta_0}E_z\approx\frac{j}{kn}\frac{\partial H_x}{\partial y}\Rightarrow E_{z1}-E_{z3}\approx\frac{j\eta_0}{k}\frac{1}{n_1^2}\frac{\partial}{\partial y}(H_{x1}-H_{x3})-\frac{j\eta_0}{n_3}\msout{\frac{n_1^2-n_3^2}{n_1^2}}o(\delta)\msout{\frac{1}{kn_3}\frac{\partial H_{x3}}{\partial y}}o(\delta)\Rightarrow H_x$连续(已有),在$y=h/2$,$C_1\cos(k_{y}\frac{h}{2}+\phi_y)=C_2e^{-jk_{y2}h/2}$,$-\frac{k_y}{n_1^2}C_1\sin(k_y\frac{h}{2}+\phi_y)=-\frac{jk_{y2}}{n_2^2}C_2e^{-jk_{y2}h/2}$,两式相除$\Rightarrow\tan(k_y\frac{h}{2}+\phi_y)=\frac{jk_{y2}n_1^2}{k_yn_2^2}$,由$k_{xj}^2+k_{yj}^2+\beta^2=k^2n_j^2$,$j=1,2$相减$\Rightarrow jk_{y2}=\sqrt{k^2(n_1^2-n_2^2)-k_y^2}$,回代$\Rightarrow\tan(k_y\frac{h}{2}+\phi_y)=\frac{n_1^2\sqrt{k^2(n_1^2-n_2^2)-n_y^2}}{n_2^2k_y}\Rightarrow$特征方程$k_y\frac{h}{2}+\phi_y=q'\pi+\arctan\frac{n_1^2\sqrt{k^2(n_1^2-n_2^2)-n_y^2}}{n_2^2k_y}$,在$y=-\frac{h}{2}$同理有特征方程$k_y\frac{h}{2}-\phi_y=q''\pi+\arctan\frac{n_1^2\sqrt{k^2(n_1^2-n_4^2)-k_y^2}}{n_4^2k_y}$,两特征方程相加消$\phi_y\Rightarrow k_yh=q\pi+\arctan\frac{n_1^2\sqrt{k^2(n_1^2-n_2^2)-k_y^2}}{n_2^2k_y}+\arctan\frac{n_1^2\sqrt{k^2(n_1^2-n_4^2)}}{n_4^2k_y}$,同理在$x=\pm\frac{w}{2}$,$k_xw=p\pi+\arctan\frac{\sqrt{k^2(n_1^2-n_3^2)-k_x^2}}{k_x}+\arctan\frac{\sqrt{k^2(n_1^2-n_5^2)-k_x^2}}{k_x}$,其中$\beta^2=n_1^2k^2-k_x^2-k_y^2$\\
+\textbf{归一化}:不失一般性,$n_1>n_5>n_4>n_2$,$n_5>n_3$,对H,$V_H=kh\sqrt{n_1^2-n_4^2}$,$a_H=\frac{n_4^2-n_2^2}{n_1^2-n_4^2}$,$b_H=\frac{\beta_H^2-k^2n_4^2}{k^2(n_1^2-n_4^2)}=\frac{N_H^2-n_4^2}{n_1^2-n_4^2}$,$c_H=\frac{n_4^2}{n_1^2}$,$d_H=c_H-a_H(1-c_H)=\frac{n_2^2}{n_1^2}$;对W,$V_W=kw\sqrt{n_1^2-n_5^2}$,$a_w=\frac{n_5^2-n_3^2}{n_1^2-n_5^2}$,$b_W=\frac{\beta_W^2-k^2n_5^2}{k^2(n_1^2-n_5^2)}$\\
 \textbf{计算步骤}:分别由H和W的$b-V$曲线得$b_H$,$b_W\Rightarrow\beta_H$,$\beta_W\Rightarrow k_y^2=n_1^2k^2-\beta_H^2$,$k_x^2=n_1^2-\beta_W^2\Rightarrow\beta^2=n_1k^2-k_x^2-k_y^2-n_1k^2=k^2(n_4^2+n_5^2-n_1^2)+b_Wk^2(n_1^2-n_5^2)+b_Hk^2(n_1^2-n_4^2)$,总传播常数$b_M=\frac{\beta^2-k^2n_5^2}{k^2(n_1^2-n_5^2)}=b_W+\frac{n_1^2-b_4^2}{n_1^2-b_5^2}(b_H-1)$\\
-\textbf{有效折射率法}:类似M法将3D波导拆解为平板波导I(纵向,安排I)/I'(横向,安排II)和II(横向)/II'(纵向),先解I/I'得有效折射率$n_{\text{eff}}^{/'}$(通常$n_{\text{eff}}\neq n_{\text{eff}}'$),将$n_{\text{eff}}^{/'}$作II/II'芯层折射率,得II/II'传播常数$\beta$作为总传播常数;解释:对弱导$E_y$模,$H_x=h_x(x,y)e^{-j\beta z}$,入波动方程$(\nabla^2+k^2n^2)H_x=0\Rightarrow[\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+k^2n^2-\beta^2]h_x=0$,分离变量$n_{\text{ps}}^2=n_x^2(x)+n_y^2(y)$,$h_x(x,y)=X(x)Y(y)$,回代$\Rightarrow\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}+\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}+[k^2n_x^2(x)+k^2n_y^2(y)-\beta^2]=0\Rightarrow$\textbf{安排I}:$\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}+k^2n_y^2=-\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}-[k^2n_x^2(x)-\beta^2]\overset{\text{def}}{=}(ke_{\text{eff}})^2\Rightarrow\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}+k^2[n_y(y)^2-n_{\text{eff}}^2]=0$,$\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}+k^2[n_x^2(x)+n_{\text{eff}}^2]-\beta^2=0$,近似为赝3D波导$n_{\text{ps}}^2=n_1^2(\text{R1}),n_2^2(\text{R2}),n_3^2+n_1^2-n_{\text{eff}}^2(\text{R3}),n_4^2(\text{R4}),n_5^2+n_1^2-n_{\text{eff}}^2(\text{R5})$,拆解为横向平板波导$n_y^2(y)=n_1^2(\abs{y}\leq\frac{h}{2}),n_2(y>\frac{h}{2}),n_4(x<-\frac{h}{2})$和纵向平板波导$n_x^2(x)=0(\abs{x}\leq\frac{w}{2}),n_3^2-n_{\text{eff}}^2(x>\frac{w}{2}),n_5^2-n_{\text{eff}}^2(x<-\frac{w}{2})$,在$y=\pm\frac{h}{2}$,$Y$,$\frac{1}{n_y^2}\frac{\mathrm{d}Y}{\mathrm{d}y}$连续,$\Rightarrow kh\sqrt{n_1^2-n_{\text{eff}}^2}=q\pi+\arctan\frac{n_1^2}{n_2^2}\frac{\sqrt{n_{\text{eff}}^2-n_2^2}}{\sqrt{n_1^2-n_{\text{eff}}^2}}+\arctan\frac{n_1^2}{n_4^2}\frac{\sqrt{n_{\text{eff}}^2-n_4^2}}{\sqrt{n_1^2-n_{\text{eff}}^2}}$,同理在$x=\pm\frac{w}{2}$,$X$,$\frac{\mathrm{d}X}{\mathrm{d}x}$连续,$kw\sqrt{n_{\text{eff}}^2-N^2}=p\pi+\arctan\frac{\sqrt{N^2-n_3^2}}{\sqrt{n_{\text{eff}}^2-N^2}}+\arctan\frac{\sqrt{N^2-n_5^2}}{\sqrt{n_{\text{eff}}^2-N^2}}$,其中$N$-3D波导总有效折射率,总传播常数$\beta=kN$,或\textbf{安排II},$\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}+k^2n_x^2(x)=-\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}-[k^2n_y^2(y)-\beta^2]\overset{\text{def}}{=}(kn_{\text{eff}}')^2\Rightarrow\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}+k^2[n_x^2(x)-n_{\text{eff}}'^2]=0$,$\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}+k^2[n_y^2(y)+n_{\text{eff}}'^2]-\beta^2=0$,近似为赝3D波导$n_{\text{sp}}^2=n_1(\text{R1}),n_2^2+n_1^2-n_{\text{eff}}'^2(\text{R2}),n_3^2(\text{R3}),n_3^2(\text{R3}),n_4^2+n_1^2-n_{\text{eff}}'^2(\text{R4}),n_5^2(\text{R5})$,拆解为纵向平板波导$n_x^2(x)=n_1^2(\abs{x}\leq\frac{w}{2}),n_3^2(x>\frac{w}{2}),n_5^2(x<-\frac{w}{2})$和横向平板波导$n_y(y)=0(\abs{y}\leq\frac{h}{2}),n_2^2-n_{\text{eff}}'^2(y>\frac{h}{2}),n_4^2-n_{\text{eff}}'^2(y<-\frac{h}{2})$,同理$\Rightarrow kw\sqrt{n_1^2-n_{\text{eff}}'^2}=p\pi+\arctan\frac{\sqrt{n_{\text{eff}}'^2-n_3^2}}{\sqrt{n_1^2-n_{\text{eff}}'^2}}+\arctan\frac{\sqrt{n_{\text{eff}}'^2-n_5^2}}{\sqrt{n_1^2-n_{\text{eff}}'^2}}$,$kh\sqrt{n_{\text{eff}}'^2-N^2}=q\pi+\arctan\frac{n_{\text{eff}'}^2}{n_2^2}\frac{\sqrt{N^2-n_2^2}}{\sqrt{n_{\text{eff}}'^2-N^2}}+\arctan\frac{n_{\text{eff}}'^2}{n_4^2}\frac{\sqrt{N^2-n_4^2}}{\sqrt{n_{\text{eff}}'^2-N^2}}$\\
+\textbf{有效折射率法}:类似M法将3D波导拆解为平板波导I(纵向,安排I)/I'(横向,安排II)和II(横向)/II'(纵向),先解I/I'得有效折射率$n_{\text{eff}}^{(')}$(通常$n_{\text{eff}}\neq n_{\text{eff}}'$),将$n_{\text{eff}}^{(')}$作II/II'芯层折射率,得II/II'传播常数$\beta$作为总传播常数;解释:对弱导$E_y$模,$H_x=h_x(x,y)e^{-j\beta z}$,入波动方程$(\nabla^2+k^2n^2)H_x=0\Rightarrow[\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+k^2n^2-\beta^2]h_x=0$,分离变量$n_{\text{ps}}^2=n_x^2(x)+n_y^2(y)$,$h_x(x,y)=X(x)Y(y)$,回代$\Rightarrow\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}+\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}+[k^2n_x^2(x)+k^2n_y^2(y)-\beta^2]=0\Rightarrow$\textbf{安排I}:$\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}+k^2n_y^2=-\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}-[k^2n_x^2(x)-\beta^2]\overset{\text{def}}{=}(ke_{\text{eff}})^2\Rightarrow\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}+k^2[n_y(y)^2-n_{\text{eff}}^2]=0$,$\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}+k^2[n_x^2(x)+n_{\text{eff}}^2]-\beta^2=0$,近似为赝3D波导$n_{\text{ps}}^2=n_1^2(\text{R1}),n_2^2(\text{R2}),n_3^2+n_1^2-n_{\text{eff}}^2(\text{R3}),n_4^2(\text{R4}),n_5^2+n_1^2-n_{\text{eff}}^2(\text{R5})$,拆解为横向平板波导$n_y^2(y)=n_1^2(\abs{y}\leq\frac{h}{2}),n_2(y>\frac{h}{2}),n_4(x<-\frac{h}{2})$和纵向平板波导$n_x^2(x)=0(\abs{x}\leq\frac{w}{2}),n_3^2-n_{\text{eff}}^2(x>\frac{w}{2}),n_5^2-n_{\text{eff}}^2(x<-\frac{w}{2})$,在$y=\pm\frac{h}{2}$,$Y$,$\frac{1}{n_y^2}\frac{\mathrm{d}Y}{\mathrm{d}y}$连续,$\Rightarrow kh\sqrt{n_1^2-n_{\text{eff}}^2}=q\pi+\arctan\frac{n_1^2}{n_2^2}\frac{\sqrt{n_{\text{eff}}^2-n_2^2}}{\sqrt{n_1^2-n_{\text{eff}}^2}}+\arctan\frac{n_1^2}{n_4^2}\frac{\sqrt{n_{\text{eff}}^2-n_4^2}}{\sqrt{n_1^2-n_{\text{eff}}^2}}$,同理在$x=\pm\frac{w}{2}$,$X$,$\frac{\mathrm{d}X}{\mathrm{d}x}$连续,$kw\sqrt{n_{\text{eff}}^2-N^2}=p\pi+\arctan\frac{\sqrt{N^2-n_3^2}}{\sqrt{n_{\text{eff}}^2-N^2}}+\arctan\frac{\sqrt{N^2-n_5^2}}{\sqrt{n_{\text{eff}}^2-N^2}}$,其中$N$-3D波导总有效折射率,总传播常数$\beta=kN$,或\textbf{安排II},$\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}+k^2n_x^2(x)=-\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}-[k^2n_y^2(y)-\beta^2]\overset{\text{def}}{=}(kn_{\text{eff}}')^2\Rightarrow\frac{1}{X}\frac{\mathrm{d}^2X}{\mathrm{d}x^2}+k^2[n_x^2(x)-n_{\text{eff}}'^2]=0$,$\frac{1}{Y}\frac{\mathrm{d}^2Y}{\mathrm{d}y^2}+k^2[n_y^2(y)+n_{\text{eff}}'^2]-\beta^2=0$,近似为赝3D波导$n_{\text{sp}}^2=n_1(\text{R1}),n_2^2+n_1^2-n_{\text{eff}}'^2(\text{R2}),n_3^2(\text{R3}),n_3^2(\text{R3}),n_4^2+n_1^2-n_{\text{eff}}'^2(\text{R4}),n_5^2(\text{R5})$,拆解为纵向平板波导$n_x^2(x)=n_1^2(\abs{x}\leq\frac{w}{2}),n_3^2(x>\frac{w}{2}),n_5^2(x<-\frac{w}{2})$和横向平板波导$n_y(y)=0(\abs{y}\leq\frac{h}{2}),n_2^2-n_{\text{eff}}'^2(y>\frac{h}{2}),n_4^2-n_{\text{eff}}'^2(y<-\frac{h}{2})$,同理$\Rightarrow kw\sqrt{n_1^2-n_{\text{eff}}'^2}=p\pi+\arctan\frac{\sqrt{n_{\text{eff}}'^2-n_3^2}}{\sqrt{n_1^2-n_{\text{eff}}'^2}}+\arctan\frac{\sqrt{n_{\text{eff}}'^2-n_5^2}}{\sqrt{n_1^2-n_{\text{eff}}'^2}}$,$kh\sqrt{n_{\text{eff}}'^2-N^2}=q\pi+\arctan\frac{n_{\text{eff}'}^2}{n_2^2}\frac{\sqrt{N^2-n_2^2}}{\sqrt{n_{\text{eff}}'^2-N^2}}+\arctan\frac{n_{\text{eff}}'^2}{n_4^2}\frac{\sqrt{N^2-n_4^2}}{\sqrt{n_{\text{eff}}'^2-N^2}}$\\
 \textbf{计算步骤}:对安排I,波导I,由$b_I-V_I$曲线得可导因子$b_I$,$n_{\text{eff}}^2=n_4^2+b_I(n_1^2-n_2^2)$,对波导II,由$b_{II}-V_{II}$曲线得$b_{II}$,总有效折射率$N^2=n_5^2+b_{II}(n_{\text{eff}}^2-n_5^2)=n_5^2+b_{II}[n_4^2-n_5^2+b_I(n_1^2-n_4^2)]$,总可导因子$b_{KT}=\frac{N^2-n_5^2}{n_1^2-n_5^2}=b_{II}+\frac{n_1^2-n_4^2}{n_1^2-n_5^2}b_{II}(b_I-1)$\\
 \textbf{折射率偏差$\Delta(n^2)$所致$\beta^2$偏差}:$\delta(\beta^2)=\frac{k^2\iint\abs{E(x,y,z)}^2\Delta[n^2(x,y)]\,\mathrm{d}x\,\mathrm{d}y}{\iint\abs{E(x,y,z)}^2\,\mathrm{d}x\,\mathrm{d}y}$,设$n=n_2(\text{R2345})$,对有效折射率法$\Delta(n^2)=n_1^2-n_{\text{eff}}^2(>0,\text{R35}),n_2^2-n_{\text{eff}}^2(\text{4角}),0(\text{其他})$,R35高估,4角低估折射率,R35处能量多于4角,故总体高估折射率,$\delta(\beta^2)>0$;对M法,折射率等效为$n_{\text{eq}}^2(x,y)=n'^2(x)+n''^2(y)$,其中$n'^2(x)=\frac{n_1^2}{2}(\abs{x}\leq\frac{w}{2}),n_2^2-n_1^2/2(x>\frac{w}{2}),n_2^2-n_1^2/2(x<-\frac{w}{2})$,$y''^2(y)=n_1^2/2(\abs{y}\leq\frac{h}{2}),n_2^2-n_1^2/2(y>\frac{h}{2}),n_2^2-n_1^2/2(y<-\frac{h}{2})$,$\Delta(n^2)=n_2^2-n_1^2(<0,\text{4角}),0(\text{其他})$,4角低估折射率,$\delta(\beta^2)<0$\\
-\end{multicols}
+\rule{\columnwidth}{.5pt}\\
+\textbf{耦合波理论}:讨论波导间相互影响或扰动下的波导;\textbf{定向耦合器}:能量来回传递的两平行波导\\
+\textbf{方法1}:视一波导为对另一波导的微扰,弱耦合下扰动小,可认为单个波导总模式为其两独立模的线性叠加,$\bm{E}(x,y,z)=a_1(z)\bm{e}_1(x,y)e^{-j\beta_1z}+a_2(z)\bm{e}_2(x,y)e^{-j\beta_2 z}$;若仅有波导1,无2,对波导1,$\{\nabla_t^2+k^2n^2[1+\delta n_1(x,y)]^2-\beta_1^2\}\bm{e}_1(x,y)=0$,其中$n$-背景折射率,$\delta n_1(x,y)$-波导1折射率相对背景偏差比,弱导近似下,$\delta n_1(x,y)$,$(kn-\beta)\sim o(\delta)\Rightarrow k^2n^2[1+\delta n_1(x,y)]^2-\beta_1^2=k^2n^2+\msout{k^2n^2\delta n_1^2(x,y)}+2k^2n^2\delta n_1(x,y)-\beta_1^2\approx(kn+\beta_1)(kn-\beta_1)+2k^2n^2\delta n_1(x,y)\approx 2kn(kn-\beta_1)+2k^2n^2\delta n_1(x,y)\Rightarrow[\nabla_t^2+2k^2n^2\delta n_1(x,y)+2kn(kn-\beta_1)]\bm{e}_1(x,y)\approx 0$,同理若仅有波导2,$[\nabla_t^2+2k^2n^2\delta n_2(x,y)+2kn(kn-\beta_2)]\bm{e}_2(x,y)\approx 0$,理论上用边条解两式即得模场,归一化输入场强$\iint_{\text{波导}i\text{截面}}\abs{\bm{e}_1(x,y)}^2\,\mathrm{d}S=1\forall i=1,2$下,$e_2(x,y)\cdot$前式$-e_1(x,y)\cdot$后式,积分$\Rightarrow\iint[e_2(x,y)\nabla_t^2e_1(x,y)-e_1(x,y)\nabla_t^2e_2(x,y)]\,\mathrm{d}S=-2k^2n^2\iint[\delta n_1(x,y)-\delta n_2(x,y)]e_1(x,y)e_2(x,y)\,\mathrm{d}S+2kn(\beta_1-\beta_2)\iint e_1(x,y)e_2(x,y)\,\mathrm{d}S$,由格林第二定理,式左$x$分量$=\iint[e_{2x}(x,y)\nabla_t^2e_{1x}(x,y)-e_{1x}(x,y)\nabla_t^2e_{2x}(x,y)]\,\mathrm{d}S=\oint_{\mathcal{C}}[e_{2x}(x,y)\nabla_te_{1x}(x,y)-e_{1x}(x,y)\nabla_te_{2x}(x,y)]\hat{n}\,\mathrm{d}l$与$\mathcal{C}$具体路径无关,将$\mathcal{C}$拉至无穷远$\Rightarrow=0\Rightarrow$式左$=0\Rightarrow\msout{2kn}(\beta_1-\beta_2)\iint e_1(x,y)e_2(x,y)\,\mathrm{d}S=\msout{2}k^{\msout{2}}n^{\msout{2}}\iint[\delta n_1(x,y)-\delta n_2(x,y)]e_1(x,y)e_2(x,y)\,\mathrm{d}S\Rightarrow C(\beta_1-\beta_2)=\kappa_1-\kappa_2$(\textbf{Marcatili关系}),其中\textbf{交叠积分}$C=\iint e_1(x,y)e_2(x,y)\,\mathrm{d}S$,\textbf{耦合系数}$\kappa_i=kn\iint\delta n_i(x,y)e_1(x,y)e_2(x,y)\,\mathrm{d}S$,下标$_i$-耦到波导$i$;若两波导相同,$\beta_1=\beta_2\Rightarrow\kappa_1=\kappa_2$,若波导1小于2,或有$\beta_{1,\text{低阶}}\approx\beta_{2,\text{高阶}}\Rightarrow\kappa_1\approx\kappa_2$,若两波导相距很远,$C\approx 0\Rightarrow\kappa_1=\kappa_2$\\
+\textbf{方法2}:视为复合波导,用麦氏方程解复合模式,最低两阶分别为对称模和反对称模,$\bm{E}(x,y,z)=e_{s0}\bm{e}_s(x,y)e^{-j\beta_sz}+a_{a0}\bm{e}_a(x,y)e^{-j\beta_az}$;对复合模,$\{\nabla_t^2+2k^2n^2[\delta n_1(x,y)+\delta n_2(x,y)]+2kn(kn-\beta)\}=0$,$e(x,y)\cdot$波导1之式$-e_1(x,y)\cdot$上式$\Rightarrow\iint[e(x,y)\nabla_t^2e_1(x,y)-e_1(x,y)\nabla_t^2e(x,y)]\,\mathrm{d}S=2k^2n^2\iint\delta n_2(x,y)e(x,y)e_1(x,y)\,\mathrm{d}S+2kn(\beta-\beta_1)\iint e(x,y)e_1(x,y)\,\mathrm{d}S$,同理格林第二定理$\Rightarrow kn\iint\delta n_2(x,y)e(x,y)e_1(x,y)\,\mathrm{d}S=(\beta-\beta_1)\iint e(x,y)e_1(x,y)\,\mathrm{d}S$,同理用$e_2$替$e_1\Rightarrow kn\iint\delta n_1(x,y)e(x,y)e_2(x,y)\,\mathrm{d}S=(\beta-\beta_2)\iint e(x,y)e_2(x,y)\,\mathrm{d}S$,弱耦合下,视复合模为两独立模叠加,$e(x,y)=e_1(x,y)+re_2(x,y)$,回代$\Rightarrow kn\iint\delta n_1(x,y)e_1(x,y)e_2(x,y)\,\mathrm{d}S+knr\iint\delta n_1(x,y)e_2^2(x,y)\,\mathrm{d}S=(\beta-\beta_2)[\iint e_1(x,y)e_2(x,y)\,\mathrm{d}S+r\iint e_2^2(x,y)\,\mathrm{d}S]\Rightarrow\kappa_1+r\rho_1=(C+r)(\beta-\beta_2)$,同理$\rho_2+r\kappa_2=(1+rC)(\beta-\beta_1)$,其中\textbf{自耦合系数}$\rho_i=kn\iint\delta_i(x,y)e_{3-i}^2(x,y)\,\mathrm{d}S$,两式联立$\Rightarrow\frac{\kappa_1+r\rho_1}{C+r}-\frac{\rho_2+r\kappa_2}{1+rC}=\beta_1-\beta_2$(\textbf{Marcatili关系});已知波导结构,即有$\kappa_1$,$\kappa_2$,$\rho_1$,$\rho_2$,$C$,需算$\beta_1$,$\beta_2$,$r$;弱耦合下,交叠很小,$C\ll 1$,自耦合$\ll$互耦合,$\rho_i\ll\kappa_i\Rightarrow\frac{\kappa_1+r\rho_1}{r}-(\rho_2+\kappa_2r)\approx\beta_1-\beta_2\Rightarrow\kappa_2r^2+(\beta_1-\beta_2)r-\kappa_1+\msout{r(\rho_2-\rho_1)}\approx 0\Rightarrow r_{s,a}=\frac{1}{\kappa_2}[-(\beta_1-\beta_2)\pm\sqrt{(\beta_1-\beta_2)^2+4\kappa_1\kappa_2}]$,设$\delta=\frac{\Delta\beta}{2}=\frac{\beta_1-\beta_2}{2}$,\textbf{失谐常数}$d=\frac{\delta}{\sqrt{\kappa_1\kappa_2}}\Rightarrow\kappa_1-\kappa_2=C\Delta\beta=2Cd\sqrt{\kappa_1\kappa_2}\Rightarrow 2Cd=\sqrt{\frac{\kappa_1}{\kappa_2}}-\sqrt{\frac{\kappa_2}{\kappa_1}}\Rightarrow\frac{\kappa_1}{\kappa_2}=[Cd+\sqrt{1+(Cd)^2}]^2\Rightarrow$\textbf{对称/反对称模}$r_{s,a}=\frac{2\sqrt{\kappa_1\kappa_2}}{2\kappa_2}[-\frac{\Delta\beta}{2\sqrt{\kappa_1\kappa_2}}\pm\sqrt{1+(\frac{\Delta\beta}{2\sqrt{\kappa_1\kappa_2}})^2}]=\sqrt{\frac{\kappa_1}{\kappa_2}}(-d\pm\sqrt{1+d^2})=[Cd+\sqrt{1+(Cd)^2}](-d\pm\sqrt{1+d^2})$,\textbf{(/反)对称模的传播常数}$\beta_{s,a}\approx\frac{\beta_1+\beta_2}{2}\pm\sqrt{\kappa_1\kappa_2(1+d^2)}=\frac{\beta_1+\beta_2}{2}\pm\sigma$,其中$\sigma=\sqrt{\kappa_1\kappa_2+\delta^2}$;弱耦合下对称与反对称模正交,$\iint[e_1(x,y)+r_se_2(x,y)][e_1(x,y)+r_ae_2(x,y)]\,\mathrm{d}S=1+r_sr_a+(r_s+r_a)C=1-\frac{\kappa_1}{\kappa_2}-C\frac{\beta_1-\beta_2}{\kappa_2}=1-\frac{\kappa_1}{\kappa_2}-\frac{\kappa_1-\kappa_2}{\kappa_2}=2(1-\frac{\kappa_1}{\kappa_2})\approx 0$;若$\kappa_1=\kappa_2\Rightarrow r_{s,a}=\pm 1\Rightarrow e(x,y)=e_1(x,y)\pm e(x,y)$,$\beta_{s,a}=\beta_1\pm \kappa_1$\\
+\textbf{耦合波方程(CME)}:$\bm{E}=a_{s0}[e_1(x,y)+r_se_2(x,y)]e^{-j\beta_sz}+a_{a0}[e_1(x,y)+r_ae_2(x,y)]e^{-j\beta_az}=(a_{s0}e^{-j\beta_sz}+a_{a0}e^{-j\beta_az})e_1(x,y)+(a_{s0}r_se^{-j\beta_sz}+a_{a0}r_ae^{-j\beta_az})e_2(x,y)=a_1(z)e_1(x,y)e^{-j\beta_1z}+a_2(z)e_2(x,y)e^{-j\beta_2z}$,其中$a_1(z)=(a_{s0}e^{-j\sigma z}+a_{a0}e^{j\sigma z})e^{j\delta z}$,$a_2(z)=(a_{s0}r_se^{-j\sigma z}+a_{a0}r_ae^{j\sigma z})e^{-j\delta z}\Rightarrow a_{s0}e^{-j\sigma z}=\frac{r_aa_1(z)e^{-j\delta z}-a_2(z)e^{j\delta z}}{r_a-r_s}$,$a_{a0}e^{j\sigma z}=\frac{r_sa_1(z)e^{-j\delta z}-a_2(z)e^{j\delta z}}{r_s-r_a}$,传输方向上各分量变化速率:$\frac{\mathrm{d}a_1}{\mathrm{d}z}=j\delta a_1(z)+j\sigma(a_{a0}e^{j\sigma z}-a_{s0}e^{-j\sigma z})e^{j\delta z}=j\delta a_1(z)+j\sigma\frac{(r_s+r_a)a_1(z)e^{-j\delta z}-2a_2(z)e^{j\delta z}}{r_s-r_a}e^{j\delta z}$,$\because r_s-r_a=\frac{2\sigma}{\kappa_2}$,$\delta+\sigma\frac{r_s+r_a}{r_s-r_a}=\delta+\sigma\frac{-2\delta/\kappa_2}{2\sigma/\kappa_2}=0$,$\therefore\frac{\mathrm{d}a_1}{\mathrm{d}z}=-j\kappa_2a_2(z)e^{j2\delta z}$,同理$\frac{\mathrm{d}a_2}{\mathrm{d}z}=-j\kappa_1a_1(z)e^{-j2\delta z}$(CME),总能量变化速率:$\frac{\mathrm{d}}{\mathrm{d}z}(\abs{a_1(z)}^2+\abs{a_2(z)}^2)=\frac{\mathrm{d}}{\mathrm{d}z}[a_1(z)a_1^*(z)+a_2(z)a_2^*(z)]=-j\kappa_2a_2(z)e^{j2\delta z}a_1^*(z)+a_1(z)[j\kappa_2^*a_2^*(z)e^{-j2\delta z}]-j\kappa_1a_1(z)e^{-j2\delta z}a_2^*(z)+a_2(z)[j\kappa_1^*a_1^*(z)e^{j2\delta z}]=j(\kappa_1^*-\kappa_2)a_1^*(z)a_2(z)e^{j2\delta z}-j(\kappa_1-\kappa_2^*)a_1(z)a_2^*(z)e^{-j2\delta z}$;若$\kappa_1=\kappa_2^*$,$\frac{\mathrm{d}}{\mathrm{d}z}(\abs{a_1(z)}^2+\abs{a_2(z)}^2)=0$,能量在两波导间来回交换但总量守恒;对$A_1(z)=a_1(z)e^{-j\beta_1z}$,$A_2(z)=a_2(z)e^{-j\beta_2z}$有$\frac{\mathrm{d}A_1}{\mathrm{d}z}=-j\beta A_1(z)+\frac{\mathrm{d}a_1}{\mathrm{d}z}e^{-j\beta_1z}=-j\beta A_1(z)-j\kappa_2a_2(z)e^{j2\delta z}e^{-j\beta_2z}=-j\beta_1A_1(z)-j\kappa_2A_2(z)$,同理$\frac{\mathrm{d}A_2}{\mathrm{d}z}=-j\beta_2A_2(z)-j\kappa_1A_1(z)$,即$\frac{\mathrm{d}}{\mathrm{d}z}\left[\begin{smallmatrix}
+    A_1\\
+    A_2
+\end{smallmatrix}\right]=-j\left[\begin{smallmatrix}
+    \beta_1&\kappa_2\\
+    \kappa_1&\beta_2
+\end{smallmatrix}\right]\left[\begin{smallmatrix}
+    A_1(z)\\
+    A_2(z)
+\end{smallmatrix}\right]$(CME)\\
+\textbf{传输矩阵法}:两波导仅在$0<z<L$处平行耦合,对$R(z)=a_1(z)e^{-j\delta z}$,$S(z)=a_2(z)e^{j\delta z}$有$\abs{R(z)}=\abs{a_1(z)}$,$\abs{S(z)}=\abs{a_2(z)}$,$\frac{\mathrm{d}R}{\mathrm{d}z}=-j\delta R(z)-j\kappa_2 S(z)$,$\frac{\mathrm{d}S}{\mathrm{d}z}=j\delta S(z)-j\kappa_1R(z)$(CME)$\Rightarrow\frac{\mathrm{d}^2R}{\mathrm{d}z^2}=-j\delta\frac{\mathrm{d}R}{\mathrm{d}z}-j\kappa_2\frac{\mathrm{d}S}{\mathrm{d}z}=-j\delta[-j\delta R(z)-j\kappa_2S(z)]-j\kappa_2[j\delta S(z)-j\kappa_1R(z)]\Rightarrow\frac{\mathrm{d}^2R}{\mathrm{d}z^2}+(\kappa_1\kappa_2+\delta^2)R(z)=\frac{\mathrm{d}^2R}{\mathrm{d}z^2}+\sigma^2R(z)=0$,同理$\frac{\mathrm{d}^2S}{\mathrm{d}z^2}+\sigma^2S(z)=0$,有通解$R(z)=C_1\cos\sigma z+C_2\sin\sigma z$,$S(z)=\frac{j}{\kappa_2}[(\sigma C_2+j\delta C_1)\cos\sigma z+(j\delta C_2-\sigma C_1)\sin\sigma z]$,边条$\Rightarrow C_1=R(0)$,$C_2=\frac{R(L)-R(0)\cos\sigma L}{\sin\sigma L}\Rightarrow\left[\begin{smallmatrix}
+    R(z)\\
+    S(z)
+\end{smallmatrix}\right]=\left[\begin{smallmatrix}
+    \cos\sigma z-j\frac{\delta}{\sigma}\sin\sigma z&-j\frac{\kappa_2}{\sigma}\sin\sigma z\\
+    -j\frac{\kappa_1}{\sigma}\sin\sigma z&\cos\sigma z+j\frac{\delta}{\sigma}\sin\sigma z
+\end{smallmatrix}\right]\left[\begin{smallmatrix}
+    R(0)\\
+    S(0)
+\end{smallmatrix}\right]$,其中$2\times 2$矩阵-传输矩阵;若$\kappa_1=\kappa_2=\sqrt{\kappa_1\kappa_2}\equiv\kappa$且仅由波导1输入,$R(0)=1$,$S(0)=0$,$R(z)=\cos\sigma z-j\frac{\delta}{\sigma}\sin\sigma z$,$S(z)=-j\frac{\kappa}{\sigma}\sin\sigma z$,$\abs{a_2(z)}_{\max}^2=\abs{S(z)}_{\max}^2=\frac{\kappa^2}{\sigma^2}=\frac{\kappa^2}{\kappa^2+\delta^2}=\frac{1}{1+\delta^2/\kappa^2}$,$\abs{a_1(z)}^2=\cos^2\sigma z+\frac{\delta^2}{\sigma^2}\sin^2\sigma z=1-\frac{\delta^2+\sigma^2}{\sigma^2}\sin^2\sigma z=1-\frac{\kappa^2}{\sigma^2}\sin^2\sigma z$,$\abs{a_1(z)}_{\min}^2=1-\frac{\kappa^2}{\sigma^2}=\frac{\delta^2}{\kappa^2+\delta^2}=\frac{1}{1+\kappa^2/\delta^2}$,$\abs{a_1(z)}^2+\abs{a_2(z)}^2=\abs{S(z)}^2+\abs{R(z)}^2=1$,\textbf{耦合长度}$l_c=\frac{\pi}{2\sigma}$,每经$2l_c$,能量交换一来回,若$\delta^2/\kappa^2\uparrow$,失谐越严重,$\abs{a_2(z)}_{\max}^2\downarrow$,$\abs{a_1(z)}_{\min}^2\uparrow$,交换越频繁\\
+\textbf{$3$dB耦合器}:将一波导的能量平分至两相同波导,$\beta_1=\beta_2$,长$L=(m+\frac{1}{2})l_c$,输入$R(0)=1$,$S(0)=0$,输出$\left[\begin{smallmatrix}
+    R(L)\\
+    S(L)
+\end{smallmatrix}\right]=\frac{1}{\sqrt{2}}\left[\begin{smallmatrix}
+    1&-j\\
+    -j&1
+\end{smallmatrix}\right]\left[\begin{smallmatrix}
+    R(0)\\
+    S(0)
+\end{smallmatrix}\right]=\frac{1}{\sqrt{2}}\left[\begin{smallmatrix}
+    1\\
+    -j
+\end{smallmatrix}\right]$,$\abs{S(z)}^2=\abs{R(z)}^2=\frac{1}{2}$\\
+\textbf{光开关(路由)}:输入$R(0)=1$,$S(0)=1$,用热光效应/非线性效应(Pockel效应:$n\sim E$,Kerr效应:$n\sim E^2$)调节$n_f\Rightarrow\beta$以控制输出;\textbf{bar态}:输出$R(L)=1$,$S(0)=0\Rightarrow\sigma L=m\pi\Rightarrow(\frac{L}{\pi})^2(\kappa^2+\delta^2)=m^2$,对应$\frac{\delta L}{\pi}-\frac{\kappa L}{\pi}$图中$\frac{1}{4}$圆弧;\textbf{cross态}:输出$S(L)=0$,$R(L)=1\Rightarrow\frac{\kappa}{\sigma}=1$,$\sigma z=\frac{\pi}{2}(2m+1)\Rightarrow(\frac{L}{\pi})^2(\kappa^2+\delta^2)=(2m+1)^2/4$,$\delta=0\Rightarrow\frac{\kappa L}{\pi}=m+\frac{1}{2}$,对应$\frac{\kappa L}{\pi}$轴上离散点,工程难实现;改进-\textbf{交换$\Delta\beta$耦合器}:长$L/2$,传播常数$\beta_1=\beta+\delta$和$\beta_2=\beta-\delta$的耦合器接同长度,传播常数$\beta_2$,$\beta_1$的耦合器,前一段传输矩阵$M_1^+\approx\left[\begin{smallmatrix}
+    \mathcal{A}_1&-j\mathcal{B}_1\\
+    -j\mathcal{B}_1^*&\mathcal{A}_1^*
+\end{smallmatrix}\right]$,第二段传输矩阵$M_1^-\approx\left[\begin{smallmatrix}
+    \mathcal{A}_1^*&-j\mathcal{B}_1\\
+    -j\mathcal{B}_1^*&\mathcal{A}_1
+\end{smallmatrix}\right]$,其中$\mathcal{A}_1=\cos\frac{\sigma L}{2}-j\frac{\delta}{\sigma}\sin\frac{\sigma L}{2}$,$\mathcal{B}_1=\frac{\kappa}{\sigma}\sin\frac{\sigma L}{2}$,总传输矩阵$M_2=M_1^-M_1^+=\left[\begin{smallmatrix}
+    \mathcal{A}_2&-j\mathcal{B}_2\\
+    -j\mathcal{B}_2^*&\mathcal{A}_2^*
+\end{smallmatrix}\right]$,其中$\mathcal{A}_2=\abs{\mathcal{A}_1}^2-\abs{\mathcal{B}_1}^2=1-2\abs{\mathcal{B}_1}^2=2\abs{\mathcal{A}_1}^2-1$,$\mathcal{B}_2=2\mathcal{A}_1^*\mathcal{B}_1$;\textbf{bar态}:$\mathcal{B}_2=0\Rightarrow\mathcal{A}_1=0\Rightarrow\frac{\sigma L}{2}=\frac{\pi}{2}(2m+1)$,$\delta=0$,工程难实现或$\mathcal{B}_1=0\Rightarrow(\frac{L}{\pi})^2(\delta^2+\kappa^2)=(2m)^2$对应$\frac{\delta L}{\pi}-\frac{\kappa L}{\pi}$图中$\frac{1}{4}$圆弧;\textbf{cross态}:$\mathcal{A}_2=0\Rightarrow\frac{\kappa^2}{\kappa^2+\delta^2}\sin^2\sqrt{\kappa^2+\delta^2}\frac{L}{2}=\frac{1}{2}$\\% 图
+\textbf{滤波器}:波导1输入,波导2滤出$\abs{a_2(L)}^2=\abs{S(L)}^2=\kappa_1^2L^2(\frac{\sin\sqrt{\kappa^2+\delta^2}L}{\sqrt{\kappa^2+\delta^2}L})^2=\frac{\kappa_1/\kappa_2}{1+(\frac{\delta}{\kappa})^2}\sin^2\sqrt{1+(\frac{\delta}{\kappa})^2}\kappa L$;若$\lambda\uparrow$,能量发散,或两波导靠近,则交叠增强,$\kappa_i\uparrow$,$l_c\downarrow$;若$\beta_1=\beta_2$,$\abs{a_2(L)}^2=\sin^2\kappa L$;中心波长$\lambda_0$满足$\kappa(\lambda_0)L=(m+\frac{1}{2})\pi$,半高波长$\lambda_{1,2}$满足$\kappa(\lambda_1)L=(m+\frac{3}{4})\pi$,$\kappa(\lambda_2)L=(m+\frac{1}{4})\pi$,$m=0,1,\cdots$,设$\kappa(\lambda)\approx\kappa(\lambda_0)+\left.\frac{\mathrm{d}\kappa}{\mathrm{d}\lambda}\right\rvert_{\lambda=\lambda_0}(\lambda-\lambda_0)\Rightarrow$\text{带宽}:半高宽$\Delta\lambda\equiv\lambda_1-\lambda_2=2(\lambda_1-\lambda_0)\approx\frac{\pi/2}{L\frac{\mathrm{d}\kappa}{\mathrm{d}\lambda}}$,设$\kappa(\lambda_0)\approx K\lambda_0\Rightarrow\Delta\lambda=\frac{\lambda_0}{2m+1}$,$m\uparrow$,相互作用距离$L\uparrow$,带宽$\Delta\lambda\downarrow$;缺点:带宽不够窄,主,旁瓣等高;改进:波导1折射率大($\Delta n_1>\Delta n_2$),波导2尺寸($h$,$W$)大,对$\lambda=\lambda_0$,$\beta_1=\beta_2\Rightarrow\delta=0$,$L=(2m+1)l_c\Rightarrow\abs{a_2(L)}^2=\frac{\kappa_1}{\kappa_2}\approx 1$,对其他$\lambda$,$\delta\neq 0$,$\abs{a_2(L)}^2$较小,半功率点$\delta_{\text{HP}m}=q_m\sqrt{\kappa_1\kappa_2}$,其中$q_0=\pm 0.798$,$q_1=\pm 0.538$,$q_2=\pm 0.429$,$\delta(\lambda)=\frac{\beta_2(\lambda)-\beta_1(\lambda)}{2}=\frac{\pi}{\lambda}[N_2(\lambda)-N_1(\lambda)]\approx\msout{\delta(\lambda_0)}+\left.\frac{\mathrm{d}\delta}{\mathrm{d}\lambda}\right\rvert_{\lambda=\lambda_0}(\lambda-\lambda_0)=\frac{\pi}{\lambda}(\frac{\mathrm{d}N_2}{\mathrm{d}\lambda}-\frac{\mathrm{d}N_1}{\mathrm{d}\lambda})_{\lambda=\lambda_0}(\lambda-\lambda_0)\Rightarrow$\textbf{半功率波长}$\frac{\lambda_{\text{HP}m}-\lambda_0}{\lambda_0}\approx\frac{q_m\sqrt{\kappa_1\kappa_2}}{\pi(\frac{\mathrm{d}N_2}{\mathrm{d}\lambda}-\frac{\mathrm{d}N_1}{\mathrm{d}\lambda})_{\lambda=\lambda_0}}\approx\frac{q_m(m+\frac{1}{2})}{L(\frac{\mathrm{d}N_2}{\mathrm{d}\lambda}-\frac{\mathrm{d}N_1}{\mathrm{d}\lambda})_{\lambda=\lambda_0}}$,$\frac{\Delta\lambda}{\lambda_0}=2\frac{\lambda_{\text{HP}m}-\lambda_0}{\lambda_0}\approx\frac{q_m(2m+1)}{L(\frac{\mathrm{d}N_2}{\mathrm{d}\lambda}-\frac{\mathrm{d}N_1}{\mathrm{d}\lambda})_{\lambda=\lambda_0}}$,通常$\frac{\Delta\lambda}{\lambda_0}$可达$0.02$;改进-\textbf{锥形定向耦合滤波器}:两波导间距随位置变化,$g=g(z)\Rightarrow\kappa=\kappa(\lambda,g(z))$,$\beta_i$,$\delta$无影响,边条:$R(-\frac{L}{2})=1$,$R(-\frac{L}{2})=0$,设$\rho(z)=-j\frac{S(z)}{R(z)}\Rightarrow\abs{S(z)}^2=\frac{\abs{\rho(z)}^2}{1+\abs{\rho(z)}^2}$,$\frac{\mathrm{d}\rho}{\mathrm{d}z}=-j\frac{1}{R^2(z)}[\frac{\mathrm{d}S}{\mathrm{d}z}R(z)-S(z)\frac{\mathrm{d}R}{\mathrm{d}z}]=-j\frac{1}{R(z)}[j\delta R(z)-j\kappa_1R(z)]+j\frac{S(z)}{R^2(z)}[-j\delta R(z)-j\kappa_2S(z)]=\delta\frac{S(z)}{R(z)}-\kappa_1+\delta\frac{S(z)}{R(z)}+\kappa_2\frac{S^2(z)}{R^2(z)}=j2\delta\rho(z)=[\kappa_1(z)+\kappa_2(z)\rho^2(z)]$;若$\delta=0$,$\kappa_1(z)=\kappa_2(z)$,则$\frac{1}{1+\rho^2(z)}\frac{\mathrm{d}\rho}{\mathrm{d}z}=-\kappa_1(z)\Rightarrow\rho(z)=-\tan[\int_{-L/2}^z\kappa_1(z')\,\mathrm{d}z']\Rightarrow\abs{S(L/2)}^2=\sin^2[\int_{-L/2}^{L/2}\kappa_1(z')\,\mathrm{d}z']$,旁瓣进一步压缩\\
+\textbf{传输矩阵法}:$\frac{\mathrm{d}A}{\mathrm{d}z}=-jQA(z)$,其中传输矩阵$Q=\left[\begin{smallmatrix}
+    \beta_1&\kappa_2\\
+    \kappa_1&\beta_2
+\end{smallmatrix}\right]$的特征值$\beta_{s,a}=\frac{1}{2}[\beta_1+\beta_2\pm\sqrt{\Delta\beta^2+4\kappa_1\kappa_2}]$,特征矢$V_s=\left[\begin{smallmatrix}
+    V_{s1}\\
+    V_{s2}
+\end{smallmatrix}\right]$,$V_a=\left[\begin{smallmatrix}
+    V_{a1}\\
+    V_{a2}
+\end{smallmatrix}\right]$,设$V=\left[\begin{matrix}
+    V_s&V_a
+\end{matrix}\right]=\left[\begin{smallmatrix}
+    V_{s1}&V_{a1}\\
+    V_{s2}&V_{a2}
+\end{smallmatrix}\right]$,$\Lambda=\left[\begin{smallmatrix}
+    \beta_s&0\\
+    0&\beta_a
+\end{smallmatrix}\right]=V^{-1}QV$,$u(z)=V^{-1}A(z)$,代入$\Rightarrow\frac{\mathrm{d}[Vu]}{\mathrm{d}z}=-jQVu\Rightarrow\frac{\mathrm{d}u}{\mathrm{d}z}=-jV^{-1}QVu=-j\Lambda u\Rightarrow u(z)=\left[\begin{smallmatrix}
+    u_1(0)e^{-j\beta_sz}\\
+    u_2(0)e^{-j\beta_az}
+\end{smallmatrix}\right]$,其中$u(0)=\left[\begin{smallmatrix}
+    a_{s0}\\
+    a_{a0}
+\end{smallmatrix}\right]$,$A(z)=Vu(z)=\left[\begin{smallmatrix}
+    V_{s1}a_{s0}e^{-j\beta_sz}+V_{a1}a_{a0}e^{-j\beta_az}\\
+    V_{s2}a_{s0}e^{-j\beta_sz}+V_{a2}a_{a0}e^{-j\beta_az}
+\end{smallmatrix}\right]$;若$\beta_1=\beta_2$,$\beta_s=\beta_1+\kappa$,$\beta_a=\beta_1-\kappa$,$V_S=\left[\begin{smallmatrix}
+    1\\
+    1
+\end{smallmatrix}\right]$,$V_a=\left[\begin{smallmatrix}
+    1\\
+    -1
+\end{smallmatrix}\right]$,$A(z)=\left[\begin{smallmatrix}
+    a_{s0}e^{-j\beta_sz}+a_{a0}e^{-j\beta_az}\\
+    a_{s0}e^{-j\beta_sz}-a_{a0}e^{-j\beta_az}
+\end{smallmatrix}\right]$;对同平面平行三波导,$A(z)=\left[\begin{smallmatrix}
+    A_1(z)\\
+    A_2(z)\\
+    A_3(z)
+\end{smallmatrix}\right]$,$Q=\left[\begin{smallmatrix}
+    \beta_1&\kappa_{12}&\kappa_{13}\\
+    \kappa_{21}&\beta_2&\kappa_{23}\\
+    \kappa_{31}&\kappa_{32}&\beta_3
+\end{smallmatrix}\right]$,其中下标$_{ij}$-波导$j$耦至$i$,若三波导相同$\beta_1=\beta_2=\beta_3\equiv\beta$,仅考虑近邻耦合,忽略次近邻耦合,$\kappa_{12}=\kappa_{21}=\kappa_{23}=\kappa_{32}\equiv\kappa$,$\kappa_{13}=\kappa_{31}=0$,则$Q=\left[\begin{smallmatrix}
+    \beta&\kappa&0\\
+    \kappa&\beta&\kappa\\
+    0&\kappa&\beta
+\end{smallmatrix}\right]$的特征值:$\beta$,$\beta\pm\sqrt{2}\kappa$,特征矢:$\frac{1}{\sqrt{2}}\left[\begin{smallmatrix}
+    1\\
+    \sqrt{2}\\
+    1
+\end{smallmatrix}\right]$,$\frac{1}{\sqrt{2}}\left[\begin{smallmatrix}
+    -1\\
+    \sqrt{2}\\
+    -1
+\end{smallmatrix}\right]$,$\frac{1}{\sqrt{2}}\left[\begin{smallmatrix}
+    \sqrt{2}\\
+    0\\
+    -\sqrt{2}
+\end{smallmatrix}\right]$,$V=\frac{1}{\sqrt{2}}\left[\begin{smallmatrix}
+    1&-1&\sqrt{2}\\
+    \sqrt{2}&\sqrt{2}&0\\
+    1&-1&-\sqrt{2}
+\end{smallmatrix}\right]$,$V^{-1}=\frac{1}{2\sqrt{2}}\left[\begin{smallmatrix}
+    1&\sqrt{2}&1\\
+    -1&\sqrt{2}&-1\\
+    \sqrt{2}&0&-\sqrt{2}
+\end{smallmatrix}\right]$,$u(z)=\left[\begin{smallmatrix}
+    u_1(0)e^{-j(\beta+\sqrt{2}\kappa)z}\\
+    u_2(0)e^{-j(\beta-\sqrt{2}\kappa)z}\\
+    u_3(0)e^{-j\beta z}
+\end{smallmatrix}\right]$,若$A(0)=\left[\begin{smallmatrix}
+    0\\
+    1\\
+    0
+\end{smallmatrix}\right]$,$u(0)=\frac{1}{2}\left[\begin{smallmatrix}
+    1\\
+    1\\
+    0
+\end{smallmatrix}\right]$,$A(z)=\left[\begin{smallmatrix}
+    -\frac{j}{\sqrt{2}}\sin\sqrt{2}\kappa z\\
+    \cos\sqrt{2}\kappa z\\
+    -\frac{j}{\sqrt{2}}\sin\sqrt{2}\kappa z
+\end{smallmatrix}\right]e^{-j\beta z}$,当$\sqrt{2}\kappa z=(m+\frac{1}{2})$,$A_1$,$A_3$分到能量极大\\
+\rule{\columnwidth}{.5pt}\\
+\textbf{TE模在介质界面上的反/折射}:$(\epsilon,\mu)(z)=(\epsilon_1,\mu_1)(z<0),(\epsilon_2,\mu_2)(z>0)$,入射($\bm{E}_1$,$\bm{k}_1$)由$zx$平面第三象限向原点$O$,与$z$轴夹角$\theta_1$,反射($\bm{E}_1'$,$\bm{k}_1'$)$O\rightarrow$二象限,折射($\bm{E}_2$,$\bm{k}_2$)$O\rightarrow$一象限,与$z$夹角$\theta_2$,反入射($\bm{E}_2'$,$\bm{k}_2'$)四象限$\rightarrow O$,与$z$夹角$\pi-\theta_2$,电场$\bm{E}=\left\{\begin{array}{ll}
+    (E_1e^{-j\bm{k}_1\cdot\bm{r}}+E_1'e^{-j\bm{k}_1'\cdot\bm{r}})e^{i\omega t},&z<0\\
+    (E_2e^{-j\bm{k}_2\cdot\bm{r}}+E_2'e^{-j\bm{k}_2'\cdot\bm{r}})e^{j\omega t},&z>0
+\end{array}\right.$,其中$\bm{r}=(x,0,z)$,在$x=0$有$E_1e^{-jk_{1x}x}+E_1'e^{-jk_{1x}'x}=E_2e^{-jk_{2x}x}+E_2'e^{-jk_{2x}'x}\forall x\Rightarrow k_{1x}=k_{1x}'=k_{2x}=k_{2x}'=k_x$,$E_1+E_1'=E_2+E_2'$,\textcircled{\tiny{1'}}$\Rightarrow\bm{H}=\frac{\nabla\times\bm{E}}{-j\omega\mu}=\frac{(-j\bm{k})\times\bm{E}}{-j\omega\mu}=\frac{\bm{k}\times\bm{E}}{\omega\mu}=\left\{\begin{array}{ll}
+    \frac{\bm{k}_1\times\hat{y}E_1+\bm{k}_1'\times\hat{y}E_1'}{\omega\mu},&z=0^-\\
+    \frac{\bm{k}_2\times\hat{y}E_2+\bm{k}_2'\times\hat{y}E_2'}{\omega\mu},&z=0^+
+\end{array}\right.$,其中$\bm{k}_{1/2}\times\hat{y}=-k_{1/2z}\hat{x}+k_{1/2x}\hat{z}$,$k_{1/2z}'=-k_{1/2z}\Rightarrow H_x=\left\{\begin{array}{ll}
+    -\frac{k_{1z}(E_1-E_1')}{\omega\mu_1},&z=0^-\\
+    -\frac{k_{2z}(E_2-E_2')}{\omega\mu_2},&z=0^+
+\end{array}\right.\Rightarrow\frac{k_{1z}}{\mu_1}(E_1-E_1')=\frac{k_{2z}}{\mu_2}(E_2-E_2')\Rightarrow\left(\begin{smallmatrix}
+    1&1\\
+    \frac{k_{1z}}{\mu_1}&-\frac{k_{1z}}{\mu_1}
+\end{smallmatrix}\right)\left(\begin{smallmatrix}
+    E_1\\
+    E_1'
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}
+    1&1\\
+    \frac{k_{2z}}{\mu_2}&-\frac{k_{2z}}{\mu_2}
+\end{smallmatrix}\right)\left(\begin{smallmatrix}
+    E_2\\
+    E_2'
+\end{smallmatrix}\right)$,其中$\frac{k_{1/2z}}{\mu_{1/2}}=\frac{k_{1/2}\cos\theta_{1/2}}{\mu_{1/2}}=\frac{k_0\sqrt{\mu_{1/2}\epsilon_{1/2}}\cos\theta_{1/2}}{\mu_{1/2}}=k_0\sqrt{\frac{\epsilon_{1/2}}{\mu_{1/2}}}\cos\theta_{1/2}\Rightarrow\left(\begin{smallmatrix}
+    1&1\\
+    \sqrt{\frac{\epsilon_1}{\mu_1}}\cos\theta_1&-\sqrt{\frac{\epsilon_1}{\mu_1}}\cos\theta_1
+\end{smallmatrix}\right)\left(\begin{smallmatrix}
+    E_1\\
+    E_1'
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}
+    1&1\\
+    \sqrt{\frac{\epsilon_2}{\mu_2}}\cos\theta_2&-\sqrt{\frac{\epsilon_2}{\mu_2}}\cos\theta_2
+\end{smallmatrix}\right)\left(\begin{smallmatrix}
+    E_2\\
+    E_2'
+\end{smallmatrix}\right)$,\textbf{反射系数}$r_{12}=\frac{E_1'}{E_1}$,$r_{21}=\frac{E_2}{E_2'}$,\textbf{透射系数}$t_{12}=\frac{E_2}{E_1}$,$t_{21}=\frac{E_1'}{E_2'}$,其中下标$_{m/n}$-$m$入$n$,线性系统中光路可逆性$\Rightarrow E_1=r_{12}E_1'+t_{21}E_2$,$E_2'=t_{12}E_1'+r_{21}E_2\Rightarrow E_1=r_{12}^2E_1+t_{12}t_{21}E_1$,菲涅尔公式$\Rightarrow r_{12}=-r_{21}\Rightarrow r_{12}^2+t_{12}t_{21}=1$,若$E_2'=0$,在$z=0$有$E_1+E_1'=E_2\Rightarrow E_1+r_{12}E_1=t_{12}E_1\Rightarrow 1+r_{12}=t_{12}$,入上矩阵式$\Rightarrow\frac{k_{1z}}{\mu_1}(1-r_{12})=\frac{k_{12}}{\mu_2}t_{12}=\frac{k_{2z}}{\mu_2}(1+r_{12})\Rightarrow r_{12}=\frac{\mu_2k_{1z}-\mu_1k_{2z}}{\mu_2k_{1z}+\mu_1k_{2z}}$,$t_{12}=1+r_{12}=\frac{2\mu_2k_{1z}}{\mu_2k_{1z}+\mu_1k_{2z}}$,若$\mu_1=\mu_2$,$r_{12}=\frac{k_{1z}-k_{2z}}{k_{1z}+k_{2z}}$,$t_{12}=\frac{2k_{1z}}{k_{1z}+k_{2z}}$\\
+\textbf{$3$层介质膜中TE模的传播}:$(\epsilon,\mu,n)(z)=(\epsilon_1,\mu_1,n_1)(z<0),(\epsilon_2,\mu_2,n_2)(0<z<d),(\epsilon_3,\mu_3,n_3)(z>d)$,入射$E_i(x,z)=Ae^{-j\bm{k}_i\cdot\bm{r}}=Ae^{-j(k_{1x}x+k_{1z}z)}(z<0)$与$z$夹角$\theta_1$,反射$E_r(x,z)=Be^{-j\bm{k}_r\cdot\bm{r}}=Be^{-j(k_{1x}x-k_{1z}z)}(z<0)$,透射$E_t(x,z)=Fe^{-j\bm{k}_t\cdot(\bm{r}-\bm{d})}=Fe^{-j[k_{3x}(x-d)+k_{3z}z]}(z>d)$与$z$夹角$\theta_3$,中间层右传$Ce^{-j(k_{2x}x+k_{2z}z)}(0<z<d)$与$z$夹角$\theta_2$,左传$De^{-j(k_{2x}x-k_{2z}z)}(0<z<d)$,边界条件$\Rightarrow k_{1x}=k_{2x}=k_{3x}=k_x$,$k_{iz}=\sqrt{k_0^2n_i^2-k_x^2}$,电场$E(x,z)=\left\{\begin{array}{ll}
+    (Ae^{-jk_{1z}z}+Be^{jk_{1z}z})e^{-jk_xx},&z<0\\
+    (Ce^{-jk_{2z}z}+De^{jk_{2z}z})e^{-jk_xx},&0<z<d\\
+    Fe^{-jk_{3z}(z-d)}e^{-jk_xx},&z>d
+\end{array}\right.$,设$\mu_1=\mu_2=\mu_3=\mu$,$H_x=\left\{\begin{array}{ll}
+    \frac{k_{1z}}{\omega\mu}(Ae^{-jk_{1z}z}-Be^{jk_{1z}z})e^{-jk_xx},&z<0\\
+    \frac{k_{2z}}{\omega\mu}(Ce^{-jk_{2z}z}-De^{jk_{2z}z})e^{-jk_xx},&0<z<d\\
+    \frac{k_{3z}}{\omega\mu}Fe^{-jk_{3z}(z-d)}e^{-jk_xx},&z>d
+\end{array}\right.$,边界条件$\Rightarrow A+B=C+D$,$k_{1z}(A-B)=k_{2z}(C-D)$,$Ce^{-jk_{2z}d}+De^{jk_{2z}d}=F$,$k_{2z}(Ce^{-jk_{2z}d}-De^{jk_{2z}d})=k_{3z}F\Rightarrow F=A\frac{4k_{1z}k_{2z}e^{-jk_{2z}d}}{(k_{1z}+k_{2z})(k_{2z}+k_{3z})+(k_{1z}-k_{2z})(k_{2z}-k_{3z})e^{-j2k_{2z}d}}$,$B=A\frac{(k_{1z}-k_{2z})(k_{2z}+k_{3z})+(k_{1z}+k_{3z})(k_{2z}-k_{3z})e^{-jk_{2z}d}}{(k_{1z}+k_{2z})(k_{2z}+k_{3z})+(k_{1z}-k_{2z})(k_{2z}-k_{3z})e^{-j2k_{2z}d}}$,$C=\frac{1}{2}F(1+\frac{k_{3z}}{k_{2z}})e^{jk_{2z}d}$,$D=\frac{1}{2}(1-\frac{k_{3z}}{k_{2z}})e^{-jk_{2z}d}$,$k_{iz}=\frac{\omega}{c}n_i\cos\theta_i$,$r_{12}=\frac{k_{1z}-k_{2z}}{k_{1z}+k_{2z}}$,$r_{23}=\frac{k_{2z}-k_{3z}}{k_{2z}+k_{3z}}$,$t_{12}=\frac{2k_{1z}}{k_{1z}+k_{2z}}$,$t_{23}=\frac{2k_{2z}}{k_{2z}+k_{3z}}$,\textbf{总透射系数}$t=\frac{F}{A}=\frac{t_{12}t_{23}e^{-j\phi}}{1+r_{12}r_{23}e^{-j2\phi}}$,\textbf{总反射系数}$r=\frac{B}{A}=\frac{r_{12}+r_{23}e^{-j2\phi}}{1+r_{12}r_{23}e^{-j2\phi}}$,其中$\phi=k_{2z}d=\frac{2\pi}{\lambda}n_2d\cos\theta_2$;\textbf{方法2}:入射$\sim Ae^{-jk_{1z}z}$,反射$\sim rAe^{jk_{1z}z}$,透射$\sim tAe^{-jk_{3z}(z-d)}$,中间层右传$\sim Ce^{-jk_{2z}z}$,左传$\sim De^{jk_{2z}z}$,其中$C=t_{12}A+r_{12}D$,$rA=r_{12}A+t_{21}D$,$tA=r_{23}Ce^{-jk_{2z}d}$,$De^{jk_{2z}d}=r_{23}Ce^{-jk_{2z}d}\Rightarrow r=r_{12}+\frac{t_{12}t_{21}r_{23}e^{-j2\phi}}{1-r_{21}r_{23}e^{-j2\phi}}$,$t=\frac{t_{12}t_{23}e^{-j\phi}}{1-r_{21}r_{23}e^{-j2\phi}}$,$C=\frac{t_{12}A}{1-r_{21}r_{23}e^{-j2\phi}}$,$D=r_{23}e^{-j2\phi}C$;\textbf{方法3}(TE/M均适用):$r=t_{12}+\sum_{m=0}^{\infty}t_{12}r_{23}t_{21}e^{-j2\phi}(r_{21}r_{23}e^{-j2\phi})^m=r_{12}+\frac{t_{12}r_{23}t_{21}e^{-j2\phi}}{1-r_{21}r_{23}e^{-j2\phi}}$,由$r_{12}=-r_{21}$,$t_{12}t_{21}-r_{12}r_{21}=1\Rightarrow r=\frac{r_{12}+r_{23}e^{-j2\phi}}{1+r_{12}r_{23}e^{-j2\phi}}$,同理$t=t_{12}t_{23}e^{-j\phi}\sum_{m=0}^{\infty}(r_{23}r_{21}e^{-j2\phi})^m=\frac{t_{12}t_{23}e^{-j\phi}}{1-r_{23}r_{21}e^{-j2\phi}}$,$r(\phi+\pi)=r(\phi)$,$t(\phi+2\pi)=t(\phi)$,$r(0)=r(\pi)=r_{13}$,$t(0)=-t(\pi)=t_{13}$;\textbf{总反射率}$R=\abs{r}^2$,\textbf{总透射率}$T=\frac{P_{3z}}{P_{1z}}=\frac{n_3\cos\theta_3}{n_1\cos\theta_1}\abs{t}^2$,若$n_1=n_3$,$T=\abs{t}^2$,\textbf{总吸收率}(若有)$A=1-R-T$;\textbf{隧穿效应}:若$n_1>n_2$,$d\rightarrow 0$且$\theta_1>\theta_c=\arcsin\frac{n_2}{n_1}$即$n_1k_0\sin\theta_1>n_2k_0$,$k_{2z}=\sqrt{k_0^2n_2^2-k_x^2}=\sqrt{k_0^2n_2^2-k_0^2n_1^2\sin^2\theta_1}=j\abs{k_{2z}}$,$k_{3z}=\sqrt{n_3k_0^2-k_x^2}$,当$n_3>n_1\sin\theta_1\Rightarrow k_3=k_0n_3>k_0n_1\sin\theta_1=k_x$,$k_{3z}$为实数,光场可传至$z>d$;\textbf{增透膜}:对$\perp$入射,$r_{12}=\frac{k_{1z}-k_{2z}}{k_{1z}+k_{2z}}=\frac{n_1-n_2}{n_1+n_2}$,$r_{23}=\frac{n_2-n_3}{n_2+n_3}$,要$r=0$,则$r_{12}+r_{23}e^{-j2\phi}=\frac{n_1-n_2}{n_1+n_2}+\frac{n_2-n_3}{n_2+n_3}e^{-j2k_0n_2d}=0$,令$e^{-j2k_0n_2d}=-1$即$2k_0n_2d=\frac{4\pi}{\lambda}n_2d=\pi$,此时$d_{\min}=\frac{\lambda}{4n_2}\Rightarrow\frac{n_1-n_2}{n_1+n_2}=\frac{n_2-n_3}{n_2+n_3}\Rightarrow n_2=\sqrt{n_1n_3}$,\\
+\textbf{多层介质膜中TE模的传播}:由$z=0$入射等厚不等折射率多层介质膜,在第$i$个界面($z=(i-1)d$)左边左传$\sim A_i$,右传$\sim B_i$,右边左传$\sim A_{i+1}'$,右传$\sim B_{i+1}'$,$A_{i+1}'=t_{i,i+1}A_i+r_{i+1,i}B_{i+1}'$,$B_i=r_{i,i+1}A_i+t_{i+1,i}B_{i+1}'\Rightarrow\left(\begin{smallmatrix}
+    1&-r_{i+1,i}\\
+    0&t_{i+1,i}
+\end{smallmatrix}\right)\left(\begin{smallmatrix}
+    A_{i+1}'\\
+    B_{i+1}'
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}
+    t_{i,i+1}&0\\
+    -r_{i,i+1}&1
+\end{smallmatrix}\right)\left(\begin{smallmatrix}
+    A_i\\
+    B_i
+\end{smallmatrix}\right)\Rightarrow\left(\begin{smallmatrix}
+    A_i\\
+    B_i
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}
+    t_{i,i+1}&0\\
+    -r_{i,i+1}&1
+\end{smallmatrix}\right)^{-1}\left(\begin{smallmatrix}
+    1&-r_{i+1,i}\\
+    0&t_{i+1,i}
+\end{smallmatrix}\right)\left(\begin{smallmatrix}
+    A_{i+1}'\\
+    B_{i+1}'
+\end{smallmatrix}\right)$,或对TE/M,$D_{\text{s}/\text{p},i}\left(\begin{smallmatrix}
+    A_i\\
+    B_i
+\end{smallmatrix}\right)=D_{\text{s}/\text{p},i+1}\left(\begin{smallmatrix}
+    A_{i+1}'\\
+    B_{i+1}'
+\end{smallmatrix}\right)\Rightarrow\left(\begin{smallmatrix}
+    A_i\\
+    B_i
+\end{smallmatrix}\right)=D_{\text{s}/\text{p},i}^{-1}D_{\text{s}/\text{p},i+1}\left(\begin{smallmatrix}
+    A_{i+1}'\\
+    B_{i+1}'
+\end{smallmatrix}\right)$,其中$D_{\text{s},i}=\left(\begin{smallmatrix}
+    1&1\\
+    \sqrt{\frac{\epsilon_i}{\mu_i}}\cos\theta_i&-\sqrt{\frac{\epsilon_i}{\mu_i}}\cos\theta_i
+\end{smallmatrix}\right)$,$D_{\text{p},i}=\left(\begin{smallmatrix}
+    \cos\theta_i&\cos\theta_i\\
+    \sqrt{\frac{\epsilon_i}{\mu_i}}&-\sqrt{\frac{\epsilon_i}{\mu_i}}
+\end{smallmatrix}\right)$,第$i$层介质($(i-1)d<z<id$)中,$A_i=A_i'e^{-jk_{2z}d}$,$B_i=B_i'e^{jk_{2z}d}\Rightarrow\left(\begin{smallmatrix}
+    A_i'\\
+    B_i'
+\end{smallmatrix}\right)=P_i\left(\begin{smallmatrix}
+    A_i\\
+    B_i
+\end{smallmatrix}\right)$,其中$P_i=\left(\begin{smallmatrix}
+    e^{jk_{iz}d}&0\\
+    0&e^{-jk_{iz}d}
+\end{smallmatrix}\right)$,若无损,$\abs{P_i}=1$,$\left(\begin{smallmatrix}
+    A_1\\
+    B_1
+\end{smallmatrix}\right)=D_1^{-1}(D_2P_2D_2^{-1})\cdots(D_nP_nD_n^{-1})D_{n+1}\left(\begin{smallmatrix}
+    A_{n+1}'\\
+    B_{n+1}'
+\end{smallmatrix}\right)=D_1^{-1}(\prod_{i=2}^nD_iP_iD_i^{-1})D_{n+1}\left(\begin{smallmatrix}
+    A_{n+1}'\\
+    B_{n+1}'
+\end{smallmatrix}\right)=M\left(\begin{smallmatrix}
+    A_{n+1}'\\
+    B_{n+1}'
+\end{smallmatrix}\right)$,其中传输矩阵$M=\left(\begin{smallmatrix}
+    M_{11}&M_{12}\\
+    M_{21}&M_{22}
+\end{smallmatrix}\right)$,$\because$单向输入,$B_{n+1}'=0\Rightarrow A_1=M_{11}A_{n+1}'$,$B_1=M_{21}A_{n+1}'$;\textbf{总反射系数}$r=\frac{B_1}{A_1}=\frac{M_{21}}{M_{11}}$,\textbf{总透射系数}$t=\frac{A_{n+1}'}{A_1}=\frac{1}{M_{11}}$,\textbf{总反射率}$R=\abs{r}^2$,\textbf{总透射率}$T=\frac{n_{n+1}\cos\theta_{n+1}}{n_1\cos\theta_1}\abs{t}^2$;若$k_{iz}d_i=m\pi$,$m\in\mathbb{N}\forall i$,$P_i=\pm\left(\begin{smallmatrix}
+    1&0\\
+    0&1
+\end{smallmatrix}\right)$,$D_iP_iD_i^{-1}=\pm\left(\begin{smallmatrix}
+    1&0\\
+    0&1
+\end{smallmatrix}\right)$,$\left(\begin{smallmatrix}
+    A_1\\
+    B_1
+\end{smallmatrix}\right)=\pm D_1^{-1}D_{n+1}\left(\begin{smallmatrix}
+    A_{n+1}'\\
+    B_{n+1}'
+\end{smallmatrix}\right)$,若$k_{iz}d_i=(2m+1)\frac{\pi}{2}\forall i$,$P_i=\pm\left(\begin{smallmatrix}
+    j&0\\
+    0&-j
+\end{smallmatrix}\right)$\\
+\textbf{1D光子晶体}:入射区折射率$n_0$,出射区$n_s$,其间以厚为$a$,$b$,折射率为$n_1$,$n_2$的介质膜(元胞,厚$\Lambda=a+b$)周期性排列$n$层,$\left(\begin{smallmatrix}
+    M_{11}&M_{12}\\
+    M_{21}&M_{22}
+\end{smallmatrix}\right)=D_0^{-1}(D_1P_1D_1^{-1}D_2P_2D_2)^nD_s$,$P_1=\left(\begin{smallmatrix}
+    e^{jk_{1z}a}&0\\
+    0&e^{-jk_{1z}a}
+\end{smallmatrix}\right)$,$P_2=\left(\begin{smallmatrix}
+    e^{jk_{2z}b}&0\\
+    0&e^{-jk_{2z}b}
+\end{smallmatrix}\right)$,亥姆霍兹方程通解$E_K(x,z)=E_K(z)e^{-jk_xx}e^{-jKz}$,其中$K$-布洛赫波数,$\because n(z+\Lambda)=n(z)$,$\because n(z+\Lambda)=n(z)$,$E_K(z+\Lambda)=E_K(z)$,$E_K(x,z+\Lambda)=E_K(z+\Lambda)e^{-jk_xx}e^{-jK(z+\Lambda)}=E_K(x,z)e^{-jK\Lambda}$,第$i$个元胞$n_2$中右传$\sim a_i$,左传$\sim b_i$,$n_1$中左传$c_i$,右传$d_i$,$\left(\begin{smallmatrix}
+    a_{i-1}\\
+    b_{i-1}
+\end{smallmatrix}\right)=e^{jK\Lambda}\left(\begin{smallmatrix}
+    a_n\\
+    b_n
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}
+    A&B\\
+    C&D
+\end{smallmatrix}\right)\left(\begin{smallmatrix}
+    a_n\\
+    b_n
+\end{smallmatrix}\right)$,其中$e^{jK\Lambda}$为单个元胞传输矩阵$\left(\begin{smallmatrix}
+    A&B\\
+    C&D
+\end{smallmatrix}\right)$的本征值$\Rightarrow\left\lvert\begin{smallmatrix}
+    e^{jK\Lambda}-A&-B\\
+    -C&e^{jK\Lambda}-D
+\end{smallmatrix}\right\rvert=e^{j2K\Lambda}-(A+D)e^{jK\Lambda}+AD-BC=0\Rightarrow e^{jK\Lambda}=\frac{(A+D)\pm\sqrt{(A+D)^2-4(AD-BC)}}{2}$,若无损,$\left\lvert\begin{smallmatrix}
+    A&B\\
+    C&D
+\end{smallmatrix}\right\rvert=1\Rightarrow e^{jK\Lambda}=\frac{1}{2}(A+D)\pm\sqrt{[\frac{1}{2}(A+D)]^2-1}$,本征矢$\left(\begin{smallmatrix}
+    a_0\\
+    b_0
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}
+    B\\
+    e^{jK\Lambda}-A
+\end{smallmatrix}\right)$,$2\cos K\Lambda=e^{jK\Lambda}+e^{-jK\Lambda}=A+D\Rightarrow K(k_{1x},\omega)=\frac{1}{\Lambda}\arccos\frac{A+D}{2}$,其中对TE,$A=e^{jk_{1z}a}[\cos(k_{2z}b)+\frac{j}{2}(\frac{k_{2z}}{k_{1z}}+\frac{k_{1z}}{k_{2z}})\sin(k_{2z}b)]$,$D=e^{-jk_{1z}a}[\cos(k_{2z}b)-\frac{j}{2}(\frac{k_{2z}}{k_{1z}}+\frac{k_{1z}}{k_{2z}})\sin(k_{2z}b)]$,$E_K(z)e^{-jKz}=(a_0e^{-jk_{1z}(z-n\Lambda)}+b_0e^{jk_{1z}(z-n\Lambda)})e^{jK(z-n\Lambda)}e^{-jKz}$,对TM,$A=e^{jk_{1z}a}[\cos(k_{2z}b)+\frac{j}{2}(\frac{n_2^2k_{1z}}{n_1^2k_{2z}}+\frac{n_1^2k_{2z}}{n_2^2k_{1z}})\sin(k_{2z}b)]$,$D=e^{-jk_{1z}a}[\cos(k_{2z}b)-\frac{j}{2}(\frac{n_1^2k_{2z}}{n_2^2k_{1z}})\sin(k_{2z}b)]$,$k_{iz}=\sqrt{n_i^2k_0^2-k_x^2}$;若$\abs{\frac{A+D}{2}}<1$,$K$为实数,光可持续传输(导带),若$\frac{A+D}{2}>1$,$K$含虚数,光迅速衰减,不可持续传输(禁带);若$\Lambda<\frac{\lambda}{2n_{\text{eff}}}$,可视为单轴均匀介质,对TE,$\cos(K\Lambda)=\frac{1}{2}[(e^{jk_{1z}a}+e^{-jk_{2z}a})\cos(k_{2z}b)+\frac{j}{2}(\frac{k_{2z}}{k_{1z}}+\frac{k_{1z}}{k_{2z}})\sin(k_{2z}b)(e^{jk_{1z}a}-e^{-jk_{1z}a})]=\cos(k_{1z}a)\cos(k_{2z}b)-\frac{1}{2}(\frac{k_{2z}}{k_{1z}}+\frac{k_{1z}}{k_{2z}})\sin(k_{2z}b)\sin(k_{2z}a)$,一阶近似($k_{1z}a\ll 1$,$k_{2z}b\ll 1$,$K\Lambda\ll 1$)$\Rightarrow 1-\frac{1}{2}(K\Lambda)^2=[1-\frac{1}{2}(k_{1z}a)^2][1-\frac{1}{2}(k_{2z}b)^2]-\frac{1}{2}(\frac{k_{2z}}{k_{1z}}+\frac{k_{1z}}{k_{2z}})(k_{2z}b)(k_{1z}a)\Rightarrow K^2\Lambda^2=k_{2z}^2b^2+k_{1z}a^2-\msout{\frac{1}{2}k_{1z}k_{2z}a^2b^2}+k_{1z}^2ab+k_{1z}^2ab+k_{2z}^2ab\Rightarrow K^2=\frac{1}{\Lambda^2}(a+b)(k_{1z}^2a+k_{2z}^2b)=\frac{1}{\Lambda}(k_{1z}^2a+k_{2z}^2b)=\frac{1}{\Lambda}\{[n_1^2(\frac{\omega}{c})^2-k_x^2]a+[n_2^2(\frac{\omega}{c})^2-k_x^2]b\}=\frac{1}{\Lambda}(\frac{\omega}{c})^2(n_1^2a+n_2^2b)-\frac{k_x^2}{\Lambda}(a+b)\Rightarrow\Lambda(K^2+k_x^2)=(\frac{\omega}{c})^2\Rightarrow(\frac{K}{n_0})+(\frac{k_x}{n_0})^2=(\frac{\omega}{c})^2$,其中$n_0^2=\frac{a}{\Lambda}n_1^2+\frac{b}{\Lambda}n_2^2$,$\epsilon_0=f\epsilon_1+(1-f)\epsilon_2$,$n_1$占空比$f=\frac{a}{\Lambda}$,$\bm{E}$恒$\perp z$,对TM,$1-\frac{1}{2}(K\Lambda)^2=[1-(\frac{1}{2}k_{1z}a)^2][1-(\frac{1}{2}k_{2z}b)^2]-\frac{1}{2}(\frac{n_2^2}{n_1^2}\frac{k_{1z}}{k_{2z}}+\frac{n_1^2}{n_2^2}\frac{k_{2z}}{k_{1z}})(k_{1z}a)(k_{2z}b)\Rightarrow K^2\Lambda^2\approx k_{1z}^2a^2+k_{2z}^2b^2+(\frac{n_2}{n_1})^2ab+(\frac{n_1}{n_2})^2ab=[(\frac{n_1}{n_2})^2a+b][(\frac{n_2}{n_1})^2k_{1z}^2a+k_{2z}^2b]=[(\frac{n_1}{n_2})^2a+b]\{(\frac{n_2}{n_1})^2[(\frac{n_1\omega}{c})^2-k_x^2]a+[(\frac{n_2\omega}{c})^2-k_x^2]b\}\Rightarrow\frac{K^2\Lambda^2}{(\frac{n_1}{n_2})^2a+b}+k_x^2[(\frac{n_2}{n_1})^2a+b]=(\frac{n_2\omega}{c})^2(a+b)\Rightarrow\frac{K^2\Lambda^2}{(n_1^2a+n_2^2b)(a+b)}+\frac{k_x^2[(\frac{n_2}{n_1})^2a+b]}{n_2^2(a+b)}=(\frac{\omega}{c})^2\Rightarrow\frac{K^2}{n_o^2}+\frac{k_x^2}{n_e^2}=(\frac{\omega}{c})^2$,其中$n_o=\frac{1}{\Lambda}(n_1^2a+n_2^2b)$,$n_e^{-2}=\frac{1}{\Lambda}(n_1^{-2}a+n_2^{-2}b)$,$\bm{E}$有$\perp$和$\parallel z$分量
+\end{multicols*}
 \end{document}
